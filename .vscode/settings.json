@@ -1,0 +1,20 @@
+{
+    "sqltools.connections": [
+        {
+            "name": "MySQL Practice DB",
+            "driver": "MySQL",
+            "server": "localhost",
+            "port": 3306,
+            "database": "practice_db",
+            "username": "analyst",
+            "askForPassword": true,
+            "connectionTimeout": 60000
+        }
+    ],
+    "sqltools.useNodeRuntime": true,
+    "sqltools.format": {
+        "language": "sql",
+        "indentSize": 2
+    },
+    "taipyStudio.gUI.elementsFilePaths": []
+}

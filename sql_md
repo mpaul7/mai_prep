@@ -1,0 +1,10 @@
+## install 
+```sh
+sudo apt install mysql-server -y
+sudo mysql
+# create new user
+create user 'mpaul'@'localhost' identified by 'Paul73#77';
+grant all privileges on *.* to 'mpaul'@'localhost';
+exit
+
+```
