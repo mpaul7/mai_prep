@@ -352,20 +352,20 @@ When your regression model is strong (high R-squared, low error metrics, signifi
 **Step 2: How Metrics Indicate Model Quality \& Inform Improvements**
 
 - **R-squared ($R^2$):**
-    - *High $R^2$ (e.g., $>0.7$):* Model fits data well; most variance is explained.
-    - *Low $R^2$ (e.g., $<0.5$):* Model misses key patterns; consider adding more features, using non-linear models, or improving data quality.
+    - **High $R^2$ (e.g., $>0.7$):** Model fits data well; most variance is explained.
+    - **Low $R^2$ (e.g., $<0.5$):** Model misses key patterns; consider adding more features, using non-linear models, or improving data quality.
 - **Error Metrics (MAE, RMSE):**
-    - *High errors:* Model predictions are far from actuals. Try feature engineering, outlier handling, or more complex models.
-    - *Low errors:* Model is precise; predictions are close to reality.
+    - **High errors:** Model predictions are far from actuals. Try feature engineering, outlier handling, or more complex models.
+    - **Low errors:** Model is precise; predictions are close to reality.
 - **P-values:**
-    - *High p-values ($>0.05$):* Predictor may not be useful; consider removing it to simplify the model.
-    - *Low p-values:* Predictor is important; keep it.
+    - **High p-values ($>0.05$):** Predictor may not be useful; consider removing it to simplify the model.
+    - **Low p-values:** Predictor is important; keep it.
 - **Bias (Mean Bias Error):**
-    - *Consistent over- or under-prediction:* Indicates systematic error; may need to adjust model or include more relevant variables.
+    - **Consistent over- or under-prediction:** Indicates systematic error; may need to adjust model or include more relevant variables.
 - **Adjusted R-squared:**
-    - *Use when multiple predictors are present.* It penalizes for adding irrelevant features, giving a more honest assessment of model quality.
+    - **Use when multiple predictors are present.** It penalizes for adding irrelevant features, giving a more honest assessment of model quality.
 - **Model Accuracy (Overall):**
-    - *For regression, accuracy is not a direct metric like in classification.* Instead, use $R^2$, RMSE, and MAE to judge how well predictions match actuals.
+    - **For regression, accuracy is not a direct metric like in classification.** Instead, use $R^2$, RMSE, and MAE to judge how well predictions match actuals.
 
 **Step 3: How to Improve Model Performance**
 
