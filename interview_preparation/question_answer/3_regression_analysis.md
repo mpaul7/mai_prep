@@ -27,15 +27,15 @@ $$
 $$
 
 - $\hat{y}$ (y-hat): The predicted or estimated value of the dependent variable ($y$) given a specific $x$.
-- $b_0$: Intercept (value of $ y $ when $ x = 0 $)
-- $b_1$: Slope (change in $ y $ for a one-unit change in $ x $)
+- $b_0$: Intercept (value of $y$ when $x = 0$)
+- $b_1$: Slope (change in $y$ for a one-unit change in $x$)
 
 
 **Assumptions**
 
-- **Linearity:** The relationship between $ x $ and $ y $ is linear.
+- **Linearity:** The relationship between $x$ and $y$ is linear.
 - **Independence:** Observations are independent of each other.
-- **Homoscedasticity:** The variance of residuals (errors) is constant across all values of $ x $.
+- **Homoscedasticity:** The variance of residuals (errors) is constant across all values of $x$.
 - **Normality:** Residuals are normally distributed.
 
 
@@ -95,7 +95,7 @@ plt.show()
 **Interpretation**
 
 - The **slope** tells you how much the dependent variable changes for each unit increase in the independent variable.
-- The **intercept** is the expected value of \$ y \$ when \$ x = 0 \$.
+- The **intercept** is the expected value of $y$ when $x = 0$.
 
 
 ---
