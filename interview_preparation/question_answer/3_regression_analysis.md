@@ -20,13 +20,13 @@ We will start with simple linear regression, then move to multiple regression an
 
 **Definition**
 
-Simple linear regression models the relationship between two continuous variables by fitting a straight line to the data. The goal is to predict the dependent variable $ y $ from the independent variable $ x $ using the equation:
+Simple linear regression models the relationship between two continuous variables by fitting a straight line to the data. The goal is to predict the dependent variable y from the independent variable x using the equation:
 
 $$
 \hat{y} = b_0 + b_1 x
 $$
 
-- $ \hat{y} $: Predicted value of the dependent variable
+- **$ \hat{y} $** (y-hat): The predicted or estimated value of the dependent variable ($y$) given a specific $x$.
 - $ b_0 $: Intercept (value of $ y $ when $ x = 0 $)
 - $ b_1 $: Slope (change in $ y $ for a one-unit change in $ x $)
 
