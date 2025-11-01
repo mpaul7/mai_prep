@@ -1,5 +1,15 @@
 # Regression Analysis
 
+## Index
+
+1. [Simple Linear Regression](#simple-linear-regression)
+2. [Practice Problem](#practice-problem)
+3. [Sales Example: Regression Analysis with R-squared and Metrics](#2-sales-example-regression-analysis-with-r-squared-and-metrics)
+4. [Interpreting Regression Metrics in Business Context](#3-interpreting-regression-metrics-in-business-context)
+5. [Interpreting Regression Metrics for Business Impact](#4-interpreting-regression-metrics-for-business-impact)
+6. [Using p-Values for Feature Selection in Regression](#5-using-p-values-for-feature-selection-in-regression)
+
+
 Regression analysis is a statistical technique used to model and analyze the relationship between a dependent variable (target) and one or more independent variables (predictors). In data science, regression is fundamental for prediction, trend analysis, and understanding variable relationships.
 
 There are two main types:
@@ -393,7 +403,7 @@ If you want, we can walk through a real dataset and interpret these metrics toge
 
 ---
 
-### Using p-Values for Feature Selection in Regression
+### 5. Using p-Values for Feature Selection in Regression
 
 
 **Can p-values be used for feature selection?**
