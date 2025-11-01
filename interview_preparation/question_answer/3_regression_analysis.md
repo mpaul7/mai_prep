@@ -2,9 +2,6 @@
 
 # Regression Analysis
 
-After regression analysis, typical next topics include classification algorithms, feature engineering, model selection, and advanced machine learning methods. Let me know if you want to proceed with regression analysis or adjust the order for your learning goals.
-
-
 ## Introduction to Regression
 
 Regression analysis is a statistical technique used to model and analyze the relationship between a dependent variable (target) and one or more independent variables (predictors). In data science, regression is fundamental for prediction, trend analysis, and understanding variable relationships.
