@@ -11,8 +11,6 @@ There are two main types:
 - **Simple Linear Regression:** One independent variable, one dependent variable.
 - **Multiple Linear Regression:** Two or more independent variables, one dependent variable.
 
-We will start with simple linear regression, then move to multiple regression and diagnostics.
-
 ## Simple Linear Regression
 
 **Definition**
@@ -99,10 +97,7 @@ plt.show()
 
 ## Practice Problem: 
 
-### Simple Linear Regression
-
-Let's work through a practical example step-by-step, including calculation and interpretation.
-
+### 1 Simple Linear Regression
 
 **Scenario**
 
@@ -119,8 +114,6 @@ Suppose you want to predict a student's final exam score ($y$) based on the numb
 | 10 | 88 |
 | 12 | 95 |
 | 14 | 100 |
-
-
 
 
 **Step 1: Fit the Simple Linear Regression Model**
@@ -170,7 +163,7 @@ plt.show()
 - **Slope ($b_1$)**: For each additional hour studied, the exam score increases by about $b_1$ points.
 - **Intercept ($b_0$)**: The predicted exam score for 0 hours studied.
 
-***
+
 
 **Step 3: Make a Prediction**
 
@@ -182,24 +175,14 @@ $$
 
 Plug in the values from your model to get the answer.
 
-***
+### 2. Sales Example: Regression Analysis with R-squared and Metrics
 
-**Step 4: Practice**
-
-- Try changing the data or predicting for a different number of hours.
-- Check the fit visually: does the line capture the trend?
-
-
-
-
-### Sales Example: Regression Analysis with R-squared and Metrics
-
-Let's use the sales data from our previous example (sales with and without advertisement) to perform a simple linear regression. We'll calculate the regression coefficients, R-squared value, and other common metrics to evaluate the model's performance.
+consider sales data (sales with and without advertisement) to perform a simple linear regression. Calculate the regression coefficients, R-squared value, and other common metrics to evaluate the model's performance.
 
 
 **Step 1: Data Setup**
 
-Suppose you have weekly sales and corresponding advertising spend:
+Suppose have weekly sales and corresponding advertising spend:
 
 ```python
 import numpy as np
@@ -271,9 +254,6 @@ plt.title('Sales vs. Advertising Spend')
 plt.show()
 ```
 
-
-***
-
 **Step 5: Interpretation**
 
 - **Intercept:** Expected sales when advertising spend is zero.
@@ -281,15 +261,8 @@ plt.show()
 - **R-squared:** Proportion of variance in sales explained by advertising spend (closer to 1 means a better fit).
 - **MSE, RMSE, MAE:** Lower values indicate better model performance.
 
-***
 
-**Would you like to try this with your own data, or see how to interpret these metrics in a business context?**
-
-
-
----
-
-### Interpreting Regression Metrics in Business Context
+### 3. Interpreting Regression Metrics in Business Context
 
 Understanding regression metrics is crucial for translating model results into actionable business decisions. Here’s how to interpret the most common metrics and their real-world significance, especially in a sales scenario:
 
@@ -305,27 +278,27 @@ Understanding regression metrics is crucial for translating model results into a
 **Step 2: Mean Absolute Error (MAE)**
 
 - **Definition:** The average absolute difference between predicted and actual sales.
-- **Business Meaning:** If MAE is \$5,000, your sales predictions are off by \$5,000 on average.[^27_3][^27_2]
+- **Business Meaning:** If MAE is \$5,000, your sales predictions are off by \$5,000 on average.
 - **Quantification:** Directly tells you the typical error in your forecasts. Lower MAE means more accurate predictions, which helps in budgeting and inventory planning.
 
 
 **Step 3: Mean Squared Error (MSE) \& Root Mean Squared Error (RMSE)**
 
 - **Definition:** MSE is the average squared error; RMSE is its square root, giving error in original units (e.g., dollars).
-- **Business Meaning:** RMSE of \$7,000 means your predictions typically deviate from actual sales by \$7,000.[^27_2][^27_3]
+- **Business Meaning:** RMSE of \$7,000 means your predictions typically deviate from actual sales by \$7,000.
 - **Quantification:** RMSE is sensitive to large errors, so it highlights big mistakes. Use it to assess risk in high-stakes decisions.
 
 
 **Step 4: Regression Coefficients (Intercept \& Slope)**
 
 - **Intercept:** Predicted sales when advertising spend is zero. Useful for baseline planning.
-- **Slope:** Change in sales for each additional unit of advertising spend. Helps quantify ROI of marketing campaigns.[^27_5][^27_6][^27_8]
+- **Slope:** Change in sales for each additional unit of advertising spend. Helps quantify ROI of marketing campaigns.
 
 
 **Step 5: P-value (for coefficients)**
 
 - **Definition:** Tests if the relationship between advertising and sales is statistically significant.
-- **Business Meaning:** If p-value < 0.05, you can be confident that advertising truly impacts sales, not just by chance.[^27_8]
+- **Business Meaning:** If p-value < 0.05, you can be confident that advertising truly impacts sales, not just by chance.
 - **Quantification:** Use p-values to decide which factors to invest in or drop from your strategy.
 
 ***
@@ -355,32 +328,23 @@ Understanding regression metrics is crucial for translating model results into a
 
 **In summary:** These metrics help you quantify model accuracy, understand business impact, and make informed decisions. Always relate the numbers back to your business goals and risk tolerance.
 
-If you want, we can walk through a real sales dataset and interpret these metrics together, or discuss how to improve them for your use case.
-
-
----
-
-### Interpreting Regression Metrics for Business Impact
-
-Let's address your two contexts for using regression metrics:
-
-***
+### 4. Interpreting Regression Metrics for Business Impact
 
 **Step 1: Assuming the Model is Very Good: Real-World Business Impact**
 
 When your regression model is strong (high R-squared, low error metrics, significant coefficients), here's how to interpret the metrics for business decisions:
 
 - **R-squared ($R^2$):**
-    - *Business meaning:* If $R^2$ is 0.85, your model explains 85% of the variation in sales based on predictors like advertising spend. This means you can confidently use the model for forecasting, budgeting, and strategic planning.[^28_2][^28_3][^28_5]
+    - *Business meaning:* If $R^2$ is $0.85$, your model explains $85%$ of the variation in sales based on predictors like advertising spend. This means you can confidently use the model for forecasting, budgeting, and strategic planning.
     - *Impact:* High $R^2$ supports data-driven decisions, such as allocating marketing budgets or predicting inventory needs.
 - **Regression Coefficients (Slope, Intercept):**
-    - *Business meaning:* The slope quantifies how much sales increase for each unit of ad spend. If the slope is 2,000, every \$1,000 increase in ad spend is expected to boost sales by \$2,000.[^28_3][^28_5][^28_2]
+    - *Business meaning:* The slope quantifies how much sales increase for each unit of ad spend. If the slope is $2,000$, every $\$1,000$ increase in ad spend is expected to boost sales by $\$2,000$.
     - *Impact:* Use this to estimate ROI and justify marketing investments.
 - **Error Metrics (MAE, RMSE):**
-    - *Business meaning:* If RMSE is \$5,000, your sales predictions are typically off by \$5,000. If this is within your business's risk tolerance, the model is actionable.[^28_4][^28_6]
+    - *Business meaning:* If RMSE is $\$5,000$, your sales predictions are typically off by $\$5,000$. If this is within your business's risk tolerance, the model is actionable.
     - *Impact:* Helps set realistic expectations for forecast accuracy and manage risk.
 - **P-values:**
-    - *Business meaning:* Low p-values (<0.05) for coefficients mean those predictors have a statistically significant impact on sales.[^28_2][^28_3]
+    - *Business meaning:* Low p-values ($<0.05$) for coefficients mean those predictors have a statistically significant impact on sales.
     - *Impact:* Focus resources on significant drivers; ignore or remove non-significant ones.
 
 ***
@@ -388,22 +352,20 @@ When your regression model is strong (high R-squared, low error metrics, signifi
 **Step 2: How Metrics Indicate Model Quality \& Inform Improvements**
 
 - **R-squared ($R^2$):**
-    - *High $R^2$ (e.g., >0.7):* Model fits data well; most variance is explained.
-    - *Low $R^2$ (e.g., <0.5):* Model misses key patterns; consider adding more features, using non-linear models, or improving data quality.[^28_8][^28_2]
+    - *High $R^2$ (e.g., $>0.7$):* Model fits data well; most variance is explained.
+    - *Low $R^2$ (e.g., $<0.5$):* Model misses key patterns; consider adding more features, using non-linear models, or improving data quality.
 - **Error Metrics (MAE, RMSE):**
-    - *High errors:* Model predictions are far from actuals. Try feature engineering, outlier handling, or more complex models.[^28_6][^28_4][^28_8]
+    - *High errors:* Model predictions are far from actuals. Try feature engineering, outlier handling, or more complex models.
     - *Low errors:* Model is precise; predictions are close to reality.
 - **P-values:**
-    - *High p-values (>0.05):* Predictor may not be useful; consider removing it to simplify the model.[^28_3][^28_2]
+    - *High p-values ($>0.05$):* Predictor may not be useful; consider removing it to simplify the model.
     - *Low p-values:* Predictor is important; keep it.
 - **Bias (Mean Bias Error):**
-    - *Consistent over- or under-prediction:* Indicates systematic error; may need to adjust model or include more relevant variables.[^28_1]
+    - *Consistent over- or under-prediction:* Indicates systematic error; may need to adjust model or include more relevant variables.
 - **Adjusted R-squared:**
-    - *Use when multiple predictors are present.* It penalizes for adding irrelevant features, giving a more honest assessment of model quality.[^28_9][^28_2]
+    - *Use when multiple predictors are present.* It penalizes for adding irrelevant features, giving a more honest assessment of model quality.
 - **Model Accuracy (Overall):**
-    - *For regression, accuracy is not a direct metric like in classification.* Instead, use $R^2$, RMSE, and MAE to judge how well predictions match actuals.[^28_4][^28_8]
-
-***
+    - *For regression, accuracy is not a direct metric like in classification.* Instead, use $R^2$, RMSE, and MAE to judge how well predictions match actuals.
 
 **Step 3: How to Improve Model Performance**
 
@@ -413,7 +375,6 @@ When your regression model is strong (high R-squared, low error metrics, signifi
 - Address data quality issues (missing values, outliers).
 - Use cross-validation to ensure model generalizes well.
 
-***
 
 **Summary Table: Business Interpretation of Metrics**
 
@@ -425,8 +386,6 @@ When your regression model is strong (high R-squared, low error metrics, signifi
 | P-value | Statistically significant | Not significant | Focus on key drivers |
 | Adjusted $R^2$ | Honest fit with many features | Overfitting risk | Feature selection |
 
-
-***
 
 **In summary:**
 
@@ -443,18 +402,18 @@ If you want, we can walk through a real dataset and interpret these metrics toge
 
 **Can p-values be used for feature selection?**
 
-Yes, p-values from regression analysis can be used to help select features. The p-value for each feature tests the null hypothesis that the feature’s coefficient is zero (i.e., the feature has no relationship with the target variable). A low p-value (typically < 0.05) suggests the feature is statistically significant and likely contributes to the model.[^29_1][^29_5][^29_10]
+Yes, p-values from regression analysis can be used to help select features. The p-value for each feature tests the null hypothesis that the feature’s coefficient is zero (i.e., the feature has no relationship with the target variable). A low p-value (typically < $0.05$) suggests the feature is statistically significant and likely contributes to the model.
 
 **How is this done in practice?**
 
-- **Stepwise Selection:** Features are added or removed from the model based on their p-values. Common thresholds are 0.05 or 0.1. Features with high p-values are considered for removal, as their relationship with the target may be due to chance.[^29_5]
-- **Manual Filtering:** After fitting a regression model, you can examine the p-values for each feature and drop those with p-values above your chosen threshold (e.g., 0.05 or 0.1).[^29_1]
+- **Stepwise Selection:** Features are added or removed from the model based on their p-values. Common thresholds are $0.05$ or $0.1$. Features with high p-values are considered for removal, as their relationship with the target may be due to chance.
+- **Manual Filtering:** After fitting a regression model, you can examine the p-values for each feature and drop those with p-values above your chosen threshold (e.g., $0.05$ or $0.1$).
 
 
 **Physical Significance**
 
-- **Low p-value (< 0.05):** Strong evidence that the feature is related to the target variable. Keep these features.
-- **High p-value (> 0.05):** Weak evidence; the feature may be noise. Consider removing these features to simplify the model and reduce overfitting.[^29_10][^29_1]
+- **Low p-value ($< 0.05$):** Strong evidence that the feature is related to the target variable. Keep these features.
+- **High p-value ($> 0.05$):** Weak evidence; the feature may be noise. Consider removing these features to simplify the model and reduce overfitting.
 
 
 **Limitations and Cautions**
@@ -467,7 +426,7 @@ Yes, p-values from regression analysis can be used to help select features. The 
 **Best Practices**
 
 - Use p-values as one tool among many for feature selection.
-- Combine with domain knowledge, regularization methods (Lasso, Ridge), and cross-validation for robust feature selection.[^29_3][^29_4]
+- Combine with domain knowledge, regularization methods (Lasso, Ridge), and cross-validation for robust feature selection.
 - Always check for multicollinearity and consider the business impact of removing features.
 
 
@@ -488,13 +447,4 @@ print(model.summary())
 # Look at p-values in the output to decide which features to keep
 ```
 
-
-***
-
-**In summary:** p-values are a useful guide for feature selection in regression, but should be used alongside other methods and domain expertise to build robust, interpretable models.[^29_5][^29_10][^29_1]
-
-
-
-
-
--
+**In summary:** p-values are a useful guide for feature selection in regression, but should be used alongside other methods and domain expertise to build robust, interpretable models.
