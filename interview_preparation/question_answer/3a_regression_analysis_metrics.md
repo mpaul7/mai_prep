@@ -85,6 +85,8 @@ rmse = mean_squared_error(y_test, y_pred, squared=False)
 - **Interpretation:** Typical error in the same units as the target variable. Lower is better.
 - **Business Significance:** Easy to communicate; shows how far off predictions are, on average.
 
+***
+
 **D. R-squared ($R^2$)**
 
 - **Formula:**
@@ -103,6 +105,7 @@ print("R-squared:", r2)
 - **Interpretation:** Proportion of variance in the target explained by the model. Ranges from 0 to 1 (higher is better).
 - **Business Significance:** Indicates how much of the outcome your model can explain; high $R^2$ means reliable predictions for planning and strategy.
 
+***
 
 **E. Adjusted R-squared**
 
@@ -155,7 +158,7 @@ print("RMSE:", rmse)
 print("R-squared:", r2)
 ```
 
-
+***
 
 **Business Significance: Quick Reference Table**
 
@@ -167,7 +170,7 @@ print("R-squared:", r2)
 | R-squared | % of outcome explained by model | Trustworthiness of forecasts |
 | Adjusted R² | Honest fit with many features | Feature selection, overfit |
 
-
+***
 
 ## Physical Significance: Regression Metrics with Practical Business Examples
 
@@ -182,12 +185,16 @@ Regression metrics are not just numbers—they translate directly into business 
     - *Sales Forecasting*: Suppose your model predicts weekly sales for a retail store. If MAE = \$2,000, on average, your predictions are off by \$2,000 per week.
     - *Impact*: If your weekly sales are typically \$20,000, this is a 10% error. If your business can tolerate a 10% deviation, the model is actionable. If not, you need to improve accuracy.
 
+***
+
 2. **Root Mean Squared Error (RMSE)**
 
 - **Definition:** Square root of the average squared error; penalizes larger mistakes.
 - **Business Example:**
     - *Real Estate Pricing*: Your model predicts house prices. RMSE = \$15,000, and the average house price is \$300,000. This means typical prediction error is 5% of the sale price.
     - *Impact*: If your business needs to price homes within \$10,000, this model may need improvement. RMSE helps you set realistic expectations for pricing accuracy.
+
+***
 
 3. **R-squared ($R^2$)**
 
@@ -196,12 +203,16 @@ Regression metrics are not just numbers—they translate directly into business 
     - *Marketing ROI*: You model the impact of ad spend on sales. If $R^2 = 0.85$, then 85% of sales variation is explained by ad spend and other predictors.
     - *Impact*: High $R^2$ means your model is reliable for forecasting and resource allocation. If $R^2$ is low (e.g., 0.40), most sales variation is unexplained, so forecasts are less trustworthy.
 
+***
+
 4. **Adjusted R-squared**
 
 - **Definition:** Adjusts $R^2$ for the number of predictors, penalizing irrelevant features.
 - **Business Example:**
     - *Customer Satisfaction*: You model Net Promoter Score (NPS) using wait time, price, and product quality. If adding more features doesn’t increase adjusted $R^2$, those features don’t help explain NPS and may be dropped.
     - *Impact*: Ensures your model is not overfitting by adding unnecessary variables.
+
+***
 
 5. **Interpreting Metrics for Business Decisions**
 
@@ -210,6 +221,7 @@ Regression metrics are not just numbers—they translate directly into business 
 - *Example*: An e-commerce company predicts weekly sales with $R^2 = 0.90$, MAE = \$1,000, RMSE = \$1,500. Weekly sales average \$20,000.
 - *Business Impact*: Model explains 90% of sales variation; typical error is 5–7.5%. The company can confidently use forecasts for inventory planning and marketing spend.
 
+***
 
 **B. Poor Model (Low $R^2$, High MAE/RMSE)**
 
