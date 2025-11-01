@@ -1,9 +1,5 @@
 # Multicollinearity
 
-### Multicollinearity in Regression: Detection, Impact, and Remedies
-
-**What is Multicollinearity?**
-
 Multicollinearity occurs when two or more predictor variables in a regression model are highly correlated. This means they contain overlapping information about the variance in the target variable, making it difficult to isolate the effect of each predictor.
 
 **Why Test for Multicollinearity Before Using p-values?**
@@ -12,7 +8,7 @@ Multicollinearity occurs when two or more predictor variables in a regression mo
 - You might see a model with a high overall R-squared, but none of the individual predictors are significant (high p-values), which is a classic sign of multicollinearity.[^30_3]
 
 
-**How to Detect Multicollinearity**
+### How to Detect Multicollinearity
 
 **A. Variance Inflation Factor (VIF)**
 
@@ -48,7 +44,7 @@ print(vif_data)
 - Coefficients with unexpected signs or instability across samples[^30_3]
 
 
-**Impact of Multicollinearity**
+### Impact of Multicollinearity
 
 - **Unstable coefficients:** Small changes in data can lead to large swings in estimated coefficients.
 - **Inflated standard errors:** Makes it hard to detect significant predictors (p-values become large even for important variables).
@@ -56,7 +52,7 @@ print(vif_data)
 - **Potential for misleading conclusions:** You might drop important variables or misinterpret the model.[^30_1][^30_6]
 
 
-5. **What Actions to Take if Multicollinearity is Detected?**
+### What Actions to Take if Multicollinearity is Detected?
 
 - **Remove or combine correlated predictors:** Drop one of the highly correlated variables, or combine them using techniques like Principal Component Analysis (PCA).[^30_7]
 - **Regularization:** Use Ridge or Lasso regression, which can handle multicollinearity by shrinking coefficients.[^30_5][^30_7]
@@ -64,7 +60,7 @@ print(vif_data)
 - **Increase sample size:** Sometimes, more data can help reduce the impact.
 
 
-6. **Best Practices**
+### **Best Practices**
 
 - Always check for multicollinearity before interpreting p-values or making feature selection decisions.
 - Use VIF and condition index as primary diagnostics, not just correlation matrices.
@@ -77,15 +73,12 @@ print(vif_data)
 - Detect it using VIF, condition index, and by observing coefficient instability.
 - Address it by removing, combining, or regularizing features, and always interpret results in the context of your business or research goals.
 
-If you want, I can walk you through a hands-on Python example of detecting and addressing multicollinearity in a dataset.
-
-
 
 ---
 
 ### Hands-on Python Example: Detecting and Addressing Multicollinearity
 
-Let's walk through a practical example of detecting and addressing multicollinearity in a regression dataset using Python. We'll use both the correlation matrix and Variance Inflation Factor (VIF), and discuss what to do if multicollinearity is found.
+Practical example of detecting and addressing multicollinearity in a regression dataset using Python. We'll use both the correlation matrix and Variance Inflation Factor (VIF), and discuss what to do if multicollinearity is found.
 
 ***
 
@@ -113,7 +106,7 @@ df = pd.DataFrame({'X1': X1, 'X2': X2, 'X3': X3, 'y': y})
 
 **Detecting Multicollinearity**
 
-### **A. Correlation Matrix**
+**A. Correlation Matrix**
 
 A quick way to spot highly correlated predictors:
 
