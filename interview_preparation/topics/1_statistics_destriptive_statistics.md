@@ -199,15 +199,11 @@ $$ Range = x_{max} - x_{min} $$
     3. Take the average of those squared deviations:  
         - If calculating **population variance**, divide by the number of data points ($N$).
 
-        $$
-        \sigma^2 = \frac{1}{N} \sum_{i=1}^N (x_i - \mu)^2
-        $$
+        $$\sigma^2 = \frac{1}{N} \sum_{i=1}^N (x_i - \mu)^2$$
 
         - If calculating **sample variance**, divide by one less than the number of data points ($n-1$), which corrects bias in small samples.
 
-        $$
-        s^2 = \frac{1}{n-1} \sum_{i=1}^n (x_i - \overline{x})^2
-        $$
+        $$s^2 = \frac{1}{n-1} \sum_{i=1}^n (x_i - \overline{x})^2$$
 
 - **Use Case:**  
   Variance is used:
