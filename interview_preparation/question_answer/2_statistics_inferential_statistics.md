@@ -120,6 +120,8 @@ Hypothesis testing is a structured method for evaluating assumptions (hypotheses
 
 - **For one-sample $z$-test for the mean:**
 
+$z$-test Formula
+
   $$
   z = \frac{\overline{x} - \mu_0}{\sigma/\sqrt{n}}
   $$
@@ -131,10 +133,12 @@ Hypothesis testing is a structured method for evaluating assumptions (hypotheses
 
 - **For one-sample $t$-test (unknown $\sigma$):**
 
+  $t$-test formula
+
   $$
   t = \frac{\overline{x} - \mu_0}{s/\sqrt{n}}
   $$
-  
+
   - $s$: sample standard deviation
 
 **4. Interpreting Results**
@@ -142,7 +146,7 @@ Hypothesis testing is a structured method for evaluating assumptions (hypotheses
 - **Reject $H_0$:** There is enough statistical evidence to support the alternative hypothesis.
 - **Fail to reject $H_0$:** There is not enough evidence to support the alternative; the result could be due to random variation.
 
-*Remember: "Failing to reject" does not prove $H_0$ is true, only that we don't have enough evidence against it.*
+**Remember:** "Failing to reject" does not prove $H_0$ is true, only that we don't have enough evidence against it.
 
 **5. Use Cases for Hypothesis Testing**
 
