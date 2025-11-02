@@ -217,9 +217,6 @@ $$ Range = x_{max} - x_{min} $$
     - To compare the consistency (variability) across different datasets.
     - Large variance means data points are more spread out; small variance means data are closely clustered around the mean.
 
-
-
-
 ### c. Standard Deviation
 - **Definition:** Standard deviation is a measure of dispersion that tells you how much the data points in a dataset typically differ from the mean. It represents the average distance of each data point from the mean.
 
@@ -231,12 +228,14 @@ $$ Range = x_{max} - x_{min} $$
 
 - **Formula:**  
 
-Population standard deviation:
+   Population standard deviation:
+    
 
     $$
-    \sigma = \sqrt{\frac{1}{N} \sum_{i=1}^N (x_i - \mu)^2}
+    \sigma = \sqrt{\frac{\sum_{i=1}^N (x_i - \mu)^2}{N}}
     $$
-Sample standard deviation:
+    
+    Sample standard deviation:
 
     $$
     s = \sqrt{\frac{1}{n-1} \sum_{i=1}^n (x_i - \overline{x})^2}
