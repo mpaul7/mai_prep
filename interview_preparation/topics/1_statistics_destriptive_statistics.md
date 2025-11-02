@@ -10,9 +10,18 @@ Descriptive statistics are statistical methods used to organize, summarize, and 
 
 **Population vs. Sample**
 
-- **Population:** The entire group you want to study.
-- **Sample:** A subset of the population, used for analysis.
-- **Sampling Error:** The difference between sample statistic and true population parameter.[^11_7][^11_2]
+In data science, it's important to distinguish between a **population** and a **sample**:
+
+- **Population:** This is the complete set of items or individuals you are interested in studying. In statistics, the population includes every member of the group you want to draw conclusions about. For example, if you want to analyze all customers of an online store, the population would be the entire customer base.
+
+- **Sample:** Since it's often impractical or impossible to study an entire population, data scientists collect a **sample**—a smaller, manageable subset of the population. The sample should be representative of the population so that the findings can be generalized. For example, you might analyze a random selection of 1,000 customers from the store's database.
+
+**Why is this important in data science?**  
+Samples allow us to estimate characteristics (parameters) of the population without the need to collect data from every individual. Proper sampling methods help ensure results are reliable and minimize bias.
+  
+**Key point:**  
+Statistical analyses are typically performed on samples, but the goal is usually to infer information about the broader population.
+
 
 ***
 
@@ -28,12 +37,15 @@ Central tendency is fundamental for understanding summary patterns within data a
 ### a. Mean (Average)
 The **mean** (also known as the arithmetic average) is a measure of central tendency that represents the sum of all values in a dataset divided by the number of values. It provides a single value that summarizes the overall level of the data, making it useful for comparing different groups or understanding the "typical" value in a dataset. The mean is sensitive to outliers, as extremely large or small values can significantly affect its value.
 
-- **Formula (Population):**
-  $$ \mu = \frac{1}{N} \sum_{i=1}^N x_i $$
-- **Formula (Sample):**
-$$ \overline{x} = \frac{1}{n} \sum_{i=1}^n x_i $$
-- **Interpretation:** The arithmetic average of all data points.
+**Formula (Population):**
 
+  $$ \mu = \frac{1}{N} \sum_{i=1}^N x_i $$
+
+**Formula (Sample):**
+
+$$ \overline{x} = \frac{1}{n} \sum_{i=1}^n x_i $$
+
+**Interpretation:** The arithmetic average of all data points.
 
 ### b. Median
 Median is a measure of central tendency that identifies the middle value in a dataset when the data points are arranged in ascending (or descending) order.
@@ -58,9 +70,10 @@ Median is a measure of central tendency that identifies the middle value in a da
 The most frequently occurring value.  
 - Continuous - sensitive to bins
 - Categorical - highest frequency
-      $$
-      \text{Mode} = \operatorname{arg\,max}_x \; \text{frequency}(x)
-      $$
+
+$$
+\text{Mode} = \operatorname{arg\,max}_x \; \text{frequency}(x)
+$$
 
 - The most frequently occurring value in the dataset.
 - Useful for categorical data.
@@ -73,9 +86,11 @@ The geometric mean is a measure of central tendency that is especially useful fo
 - **Best for:** Positively-skewed data, data involving ratios, percentages, or exponential growth.
 
 - **Formula (Population or Sample):**
-  $$
-  \text{Geometric Mean} = \left( \prod_{i=1}^n x_i \right)^{1/n}
-  $$
+
+$$
+\text{Geometric Mean} = \left( \prod_{i=1}^n x_i \right)^{1/n}
+$$
+
   where $x_i$ are the data points and $n$ is the number of points.
 
 - **Note:** All data points must be strictly positive for the geometric mean to be defined.
@@ -142,9 +157,11 @@ print(f"Harmonic Mean: {harmonic_mean}")
 
 - **Further Notes**:
   - For any set of positive numbers:  
-    $$
-    \text{Harmonic Mean} \leq \text{Geometric Mean} \leq \text{Arithmetic Mean}
-    $$
+
+$$
+\text{Harmonic Mean} \leq \text{Geometric Mean} \leq \text{Arithmetic Mean}
+$$
+
     Equality holds only when all data points are identical.
   - The choice of mean can affect downstream analysis or business insights—using the inappropriate mean may misrepresent the data.
 
@@ -168,6 +185,7 @@ print(f"Harmonic Mean: {harmonic_mean}")
 - **Use Case:** Range is useful for quickly assessing the total spread or span of a dataset. It’s often used as an initial descriptive statistic to get a sense of variability, particularly when you want a fast, rough idea of how wide-ranging your data are. However, it is very sensitive to outliers and does not give information about the distribution of values between the extremes.
 
 - Difference between maximum and minimum values.
+
 $$ Range = x_{max} - x_{min} $$
 
 ### b. Variance
@@ -209,9 +227,11 @@ $$ Range = x_{max} - x_{min} $$
     4. Take the square root of the variance.
 
 - **Formula:**  
+
     $$
     \text{Population standard deviation:} \qquad \sigma = \sqrt{\frac{1}{N} \sum_{i=1}^N (x_i - \mu)^2}
     $$
+
     $$
     \text{Sample standard deviation:} \qquad s = \sqrt{\frac{1}{n-1} \sum_{i=1}^n (x_i - \overline{x})^2}
     $$
@@ -240,14 +260,19 @@ $$ Range = x_{max} - x_{min} $$
 **The solution is to rely on quartiles:**
 - Quartiles divide the data into four equal parts:
     - **First quartile (Q1):** 25th percentile  
+
       $$
       Q_1 = \text{Value at } 25^\text{th} \text{ percentile}
       $$
+
     - **Second quartile (Q2, median):** 50th percentile  
+
       $$
       Q_2 = \text{Value at } 50^\text{th} \text{ percentile}
       $$
+
     - **Third quartile (Q3):** 75th percentile  
+
       $$
       Q_3 = \text{Value at } 75^\text{th} \text{ percentile}
       $$
@@ -263,11 +288,11 @@ $$
 $$
 
 **Quartiles** are values that split your ordered data into four equal parts:
-- **First quartile (Q1):** The value below which 25% of the data fall (25th percentile)
-- **Second quartile (Q2 or median):** The value below which 50% of the data fall (50th percentile)
-- **Third quartile (Q3):** The value below which 75% of the data fall (75th percentile)
+- **First quartile (Q1):** The value below which $25%$ of the data fall (25th percentile)
+- **Second quartile (Q2 or median):** The value below which $50%$ of the data fall (50th percentile)
+- **Third quartile (Q3):** The value below which $75%$ of the data fall (75th percentile)
 
-The IQR is robust to outliers and provides a better sense of the spread in the center of the data than the total range, since it ignores the lowest 25% and highest 25% of values and focuses on the variability of the middle half of the dataset.
+The IQR is robust to outliers and provides a better sense of the spread in the center of the data than the total range, since it ignores the lowest $25%$ and highest $25%% of values and focuses on the variability of the middle half of the dataset.
 
 ### Detect ouliers using IQR
 
@@ -277,7 +302,10 @@ To detect outliers using the Interquartile Range (IQR):
    - Find the first quartile (Q1, 25th percentile) and third quartile (Q3, 75th percentile).
 
 2. **Compute the IQR:**  
-   $$ \text{IQR} = Q_3 - Q_1 $$
+
+   $$ 
+   \text{IQR} = Q_3 - Q_1 
+   $$
 
 3. **Determine outlier thresholds:**  
    - **Lower bound:** $Q_1 - 1.5 \times \text{IQR}$
@@ -300,7 +328,7 @@ Box plots, also known as box-and-whisker plots, are graphical representations us
 
 
 - **The Box:**  
-  The central box represents the interquartile range (IQR), stretching from the first quartile (Q1) to the third quartile (Q3). This covers the middle 50% of the data.
+  The central box represents the interquartile range (IQR), stretching from the first quartile (Q1) to the third quartile (Q3). This covers the middle $50%$ of the data.
 
 - **The Median Line:**  
   A horizontal line inside the box marks the median (Q2) of the data.
@@ -346,9 +374,11 @@ In statistics, **moments** are quantitative measures related to the shape of a d
 #### What are Moments?
 
 Moments are calculated with respect to the mean (central moments) or with respect to the origin (raw moments). The $r$-th moment about the mean for a random variable $X$ is defined as:
+
 $$
 \mu_r = E[(X - \mu)^r]
 $$
+
 where $E$ is the expectation operator, $\mu$ is the mean of $X$, and $r$ is the order of the moment.
 
 #### Main Types and Their Uses
@@ -366,16 +396,29 @@ where $E$ is the expectation operator, $\mu$ is the mean of $X$, and $r$ is the 
 
 - **Second Moment (Variance):**
   - Measures variability/spread from the mean.
-  - Formula: $\displaystyle \sigma^2 = \frac{1}{n} \sum_{i=1}^n (x_i - \mu)^2$
+  - Formula: 
+  
+  $$
+  \displaystyle \sigma^2 = \frac{1}{n} \sum_{i=1}^n (x_i - \mu)^2
+  $$
 
 - **Third Moment (Skewness):**
   - Measures the degree of asymmetry of the distribution.
-  - Formula: $\displaystyle \text{Skewness} = \frac{E[(X - \mu)^3]}{\sigma^3}$
+  - Formula: 
+  
+  $$\displaystyle \text{Skewness} = \frac{E[(X - \mu)^3]}{\sigma^3}
+  $$
+
   - Interpretation: Positive value (right-skewed), Negative value (left-skewed)
 
 - **Fourth Moment (Kurtosis):**
   - Measures the heaviness of tails and sharpness of peak.
-  - Formula: $\displaystyle \text{Kurtosis} = \frac{E[(X - \mu)^4]}{\sigma^4}$
+  - Formula: 
+  
+  $$
+  \displaystyle \text{Kurtosis} = \frac{E[(X - \mu)^4]}{\sigma^4}
+  $$
+  
   - Interpretation: High value (leptokurtic, heavy tails), Low value (platykurtic, light tails)
 
 #### Use Cases
