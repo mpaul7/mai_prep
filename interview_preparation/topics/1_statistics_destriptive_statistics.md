@@ -259,23 +259,17 @@ $$ Range = x_{max} - x_{min} $$
     - **First quartile (Q1):** 
     25th percentile  
 
-      $$
-      Q_1 = \text{Value at } 25^\text{th} \text{ percentile}
-      $$
+      $$Q_1 = \text{Value at } 25^\text{th} \text{ percentile}$$
 
     - **Second quartile (Q2, median):** 
     50th percentile  
 
-      $$
-      Q_2 = \text{Value at } 50^\text{th} \text{ percentile}
-      $$
+      $$Q_2 = \text{Value at } 50^\text{th} \text{ percentile}$$
 
     - **Third quartile (Q3):** 
     75th percentile  
 
-      $$
-      Q_3 = \text{Value at } 75^\text{th} \text{ percentile}
-      $$
+      $$Q_3 = \text{Value at } 75^\text{th} \text{ percentile}$$
 
 ---
 
