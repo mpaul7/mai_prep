@@ -72,7 +72,7 @@ The most frequently occurring value.
 - Categorical - highest frequency
 
 $$
-\text{Mode} = \operatorname{arg\,max}_x \; \text{frequency}(x)
+\text{Mode} = \text{arg\,max}_x \; \text{frequency}(x)
 $$
 
 - The most frequently occurring value in the dataset.
@@ -103,9 +103,11 @@ The harmonic mean is another type of average that is useful when dealing with ra
 - **Best for:** Averaging rates (e.g., speed: distance per unit time), ratios, or quantities where values must be aggregated in a reciprocal manner.
 
 - **Formula (Population or Sample):**
+
   $$
   \text{Harmonic Mean} = \frac{n}{\sum_{i=1}^n \frac{1}{x_i}}
   $$
+
   where $x_i$ are the data points and $n$ is the number of points.
 
 - **Note:** All data points must be non-zero for the harmonic mean to be defined.
@@ -196,15 +198,16 @@ $$ Range = x_{max} - x_{min} $$
     2. Subtract the mean from each data point and square the result (this gives you the squared deviations).
     3. Take the average of those squared deviations:  
         - If calculating **population variance**, divide by the number of data points ($N$).
+
+        $$
+        \qquad \sigma^2 = \frac{1}{N} \sum_{i=1}^N (x_i - \mu)^2
+        $$
+
         - If calculating **sample variance**, divide by one less than the number of data points ($n-1$), which corrects bias in small samples.
 
-    $$
-    \text{Population variance:} \qquad \sigma^2 = \frac{1}{N} \sum_{i=1}^N (x_i - \mu)^2
-    $$
-
-    $$
-    \text{Sample variance:} \qquad s^2 = \frac{1}{n-1} \sum_{i=1}^n (x_i - \overline{x})^2
-    $$
+        $$
+        \qquad s^2 = \frac{1}{n-1} \sum_{i=1}^n (x_i - \overline{x})^2
+        $$
 
 - **Use Case:**  
   Variance is used:
@@ -418,7 +421,7 @@ where $E$ is the expectation operator, $\mu$ is the mean of $X$, and $r$ is the 
   $$
   \displaystyle \text{Kurtosis} = \frac{E[(X - \mu)^4]}{\sigma^4}
   $$
-  
+
   - Interpretation: High value (leptokurtic, heavy tails), Low value (platykurtic, light tails)
 
 #### Use Cases
