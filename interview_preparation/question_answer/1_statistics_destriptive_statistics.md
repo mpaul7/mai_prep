@@ -8,6 +8,14 @@ Descriptive statistics are statistical methods used to organize, summarize, and 
 
 ***
 
+**Population vs. Sample**
+
+- **Population:** The entire group you want to study.
+- **Sample:** A subset of the population, used for analysis.
+- **Sampling Error:** The difference between sample statistic and true population parameter.[^11_7][^11_2]
+
+***
+
 ## 1. Measures of Central Tendency
 Central tendency refers to statistical measures that identify a single value as representative of an entire dataset. These measures aim to provide an accurate summary of the typical, or "central," value in the data distribution. The three most common measures of central tendency are:
 - **Mean:** The arithmetic average of all the data points.
