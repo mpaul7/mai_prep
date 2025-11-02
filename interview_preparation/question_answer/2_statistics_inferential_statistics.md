@@ -82,9 +82,10 @@ These methods are the foundation of inferential statistics and enable data scien
 ### 1. Hypothesis Testing
 **Hypothesis Testing: An Overview**
 
+**1. What is Hypothesis Testing?**
+
 Hypothesis testing is a fundamental statistical technique used to make inferences about populations based on sample data. It answers questions like: "Does this treatment have an effect?" or "Are these two groups statistically different?"
 
-**1. What is Hypothesis Testing?**
 Hypothesis testing is a structured method for evaluating assumptions (hypotheses) about a population using data from a sample. It helps determine whether observed effects are real or simply due to random chance.
 
 **2. Core Concepts & Steps**
@@ -118,18 +119,22 @@ Hypothesis testing is a structured method for evaluating assumptions (hypotheses
 **3. Common Hypothesis Test Formulas**
 
 - **For one-sample $z$-test for the mean:**
+
   $$
   z = \frac{\overline{x} - \mu_0}{\sigma/\sqrt{n}}
   $$
+
   - $\overline{x}$: sample mean  
   - $\mu_0$: hypothesized population mean  
   - $\sigma$: population standard deviation  
   - $n$: sample size
 
 - **For one-sample $t$-test (unknown $\sigma$):**
+
   $$
   t = \frac{\overline{x} - \mu_0}{s/\sqrt{n}}
   $$
+  
   - $s$: sample standard deviation
 
 **4. Interpreting Results**
