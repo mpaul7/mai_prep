@@ -297,9 +297,7 @@ To detect outliers using the Interquartile Range (IQR):
 
 2. **Compute the IQR:**  
 
-   $$ 
-   \text{IQR} = Q_3 - Q_1 
-   $$
+   $$\text{IQR} = Q_3 - Q_1$$
 
 3. **Determine outlier thresholds:**  
    - **Lower bound:** $Q_1 - 1.5 \times \text{IQR}$
@@ -369,9 +367,7 @@ In statistics, **moments** are quantitative measures related to the shape of a d
 
 Moments are calculated with respect to the mean (central moments) or with respect to the origin (raw moments). The $r$-th moment about the mean for a random variable $X$ is defined as:
 
-$$
-\mu_r = E[(X - \mu)^r]
-$$
+$$\mu_r = E[(X - \mu)^r]$$
 
 where $E$ is the expectation operator, $\mu$ is the mean of $X$, and $r$ is the order of the moment.
 
@@ -392,16 +388,13 @@ where $E$ is the expectation operator, $\mu$ is the mean of $X$, and $r$ is the 
   - Measures variability/spread from the mean.
   - Formula: 
   
-  $$
-  \displaystyle \sigma^2 = \frac{1}{n} \sum_{i=1}^n (x_i - \mu)^2
-  $$
+  $$\displaystyle \sigma^2 = \frac{1}{n} \sum_{i=1}^n (x_i - \mu)^2$$
 
 - **Third Moment (Skewness):**
   - Measures the degree of asymmetry of the distribution.
   - Formula: 
   
-  $$\displaystyle \text{Skewness} = \frac{E[(X - \mu)^3]}{\sigma^3}
-  $$
+  $$\displaystyle \text{Skewness} = \frac{E[(X - \mu)^3]}{\sigma^3}$$
 
   - Interpretation: Positive value (right-skewed), Negative value (left-skewed)
 
@@ -409,9 +402,7 @@ where $E$ is the expectation operator, $\mu$ is the mean of $X$, and $r$ is the 
   - Measures the heaviness of tails and sharpness of peak.
   - Formula: 
   
-  $$
-  \displaystyle \text{Kurtosis} = \frac{E[(X - \mu)^4]}{\sigma^4}
-  $$
+  $$\displaystyle \text{Kurtosis} = \frac{E[(X - \mu)^4]}{\sigma^4}$$
 
   - Interpretation: High value (leptokurtic, heavy tails), Low value (platykurtic, light tails)
 
