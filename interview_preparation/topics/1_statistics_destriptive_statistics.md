@@ -231,15 +231,11 @@ $$ Range = x_{max} - x_{min} $$
    Population standard deviation:
     
 
-    $$
-    \sigma = \sqrt{\frac{\sum_{i=1}^N (x_i - \mu)^2}{N}}
-    $$
+    $$\sigma = \sqrt{\frac{\sum_{i=1}^N (x_i - \mu)^2}{N}}$$
     
     Sample standard deviation:
 
-    $$
-    s = \sqrt{\frac{1}{n-1} \sum_{i=1}^n (x_i - \overline{x})^2}
-    $$
+    $$s = \sqrt{\frac{1}{n-1} \sum_{i=1}^n (x_i - \overline{x})^2}$$
 
 - **Why Square Root of Variance:**  
     Taking the square root of the variance gives the standard deviation in the **same units** as the original data, making it directly interpretable. Variance is in squared units, which are less intuitive, while standard deviation restores the original scale.
