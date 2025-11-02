@@ -118,7 +118,7 @@ Hypothesis testing is a structured method for evaluating assumptions (hypotheses
 
 **3. Common Hypothesis Test Formulas**
 
-- **For one-sample $z$-test for the mean:**
+**For one-sample $z$-test for the mean:**
 
 $z$-test Formula
 
@@ -131,7 +131,7 @@ $z$-test Formula
   - $\sigma$: population standard deviation  
   - $n$: sample size
 
-- **For one-sample $t$-test (unknown $\sigma$):**
+**For one-sample $t$-test (unknown $\sigma$):**
 
 $t$-test formula
 
