@@ -200,13 +200,13 @@ $$ Range = x_{max} - x_{min} $$
         - If calculating **population variance**, divide by the number of data points ($N$).
 
         $$
-        \qquad \sigma^2 = \frac{1}{N} \sum_{i=1}^N (x_i - \mu)^2
+        \sigma^2 = \frac{1}{N} \sum_{i=1}^N (x_i - \mu)^2
         $$
 
         - If calculating **sample variance**, divide by one less than the number of data points ($n-1$), which corrects bias in small samples.
 
         $$
-        \qquad s^2 = \frac{1}{n-1} \sum_{i=1}^n (x_i - \overline{x})^2
+        s^2 = \frac{1}{n-1} \sum_{i=1}^n (x_i - \overline{x})^2
         $$
 
 - **Use Case:**  
@@ -231,12 +231,15 @@ $$ Range = x_{max} - x_{min} $$
 
 - **Formula:**  
 
-    $$
-    \text{Population standard deviation:} \qquad \sigma = \sqrt{\frac{1}{N} \sum_{i=1}^N (x_i - \mu)^2}
-    $$
+Population standard deviation:
 
     $$
-    \text{Sample standard deviation:} \qquad s = \sqrt{\frac{1}{n-1} \sum_{i=1}^n (x_i - \overline{x})^2}
+    \sigma = \sqrt{\frac{1}{N} \sum_{i=1}^N (x_i - \mu)^2}
+    $$
+Sample standard deviation:
+
+    $$
+    s = \sqrt{\frac{1}{n-1} \sum_{i=1}^n (x_i - \overline{x})^2}
     $$
 
 - **Why Square Root of Variance:**  
@@ -262,19 +265,22 @@ $$ Range = x_{max} - x_{min} $$
 
 **The solution is to rely on quartiles:**
 - Quartiles divide the data into four equal parts:
-    - **First quartile (Q1):** 25th percentile  
+    - **First quartile (Q1):** 
+    25th percentile  
 
       $$
       Q_1 = \text{Value at } 25^\text{th} \text{ percentile}
       $$
 
-    - **Second quartile (Q2, median):** 50th percentile  
+    - **Second quartile (Q2, median):** 
+    50th percentile  
 
       $$
       Q_2 = \text{Value at } 50^\text{th} \text{ percentile}
       $$
 
-    - **Third quartile (Q3):** 75th percentile  
+    - **Third quartile (Q3):** 
+    75th percentile  
 
       $$
       Q_3 = \text{Value at } 75^\text{th} \text{ percentile}
