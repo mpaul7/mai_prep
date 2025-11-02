@@ -133,7 +133,7 @@ $z$-test Formula
 
 - **For one-sample $t$-test (unknown $\sigma$):**
 
-  $t$-test formula
+$t$-test formula
 
   $$
   t = \frac{\overline{x} - \mu_0}{s/\sqrt{n}}
