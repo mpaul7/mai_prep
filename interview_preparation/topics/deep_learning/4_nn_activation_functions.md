@@ -9,9 +9,8 @@ z = \mathbf{w}^T \mathbf{x} + b
 $$
 
 Then applies an activation function 
-$$
-a = f(z)
-$$
+
+$$a = f(z)$$
 
 Without $f$, the model would just be a linear transformation — no matter how many layers you stack, the entire network would remain linear.
 
@@ -63,7 +62,7 @@ Activation functions introduce non-linearity, enabling the network to learn comp
 - **Cons:**  
   - "Dying ReLU" problem (neurons stuck at 0 for all inputs).
 
-#### Leaky ReLU (Leaky Rectified Linear Unit)
+#### 4. Leaky ReLU (Leaky Rectified Linear Unit)
 
 - **Formula:**  
 
@@ -115,7 +114,7 @@ Activation functions introduce non-linearity, enabling the network to learn comp
 - **Swish:** \( f(x) = x \cdot sigmoid(x) \); sometimes outperforms ReLU in deep networks.
 - **GELU (Gaussian Error Linear Unit):** Used in modern architectures (e.g., Transformers).
 
-### How to Choose an Activation Function
+#### How to Choose an Activation Function
 
 1. **Task/Output Type:**
    - **Binary Classification Output:** Use Sigmoid at output layer.
@@ -133,14 +132,14 @@ Activation functions introduce non-linearity, enabling the network to learn comp
    - Try different activations and select based on validation performance.
    - Modern recommendations typically default to ReLU/Leaky ReLU for hidden layers, softmax/sigmoid for output as appropriate.
 
-### Practical Recommendations
+#### Practical Recommendations
 
 - Use **ReLU** or variants for most hidden layers.
 - Use **Sigmoid/Softmax** in output based on the task (binary/multi-class classification).
 - Experiment with advanced activations (ELU, Swish, GELU) if you’re building very deep networks or using architectures where these are standard.
 - Monitor for issues like "dying ReLU" (lots of zeros in feature maps) or vanishing gradients, and switch activations if you encounter them.
 
-### Example (Keras/PyTorch Specification)
+#### Example (Keras/PyTorch Specification)
 
 ```python
 import tensorflow as tf
@@ -186,7 +185,7 @@ Dense(3, activation='softmax')
 | Sequence data/Language models (e.g., transformers)  | GELU                         | State-of-the-art empirical performance in modern architectures         |
 | Interpreting output as probabilities (multiclass)   | Softmax                      | Each output in (0,1), sums to 1, interpretable as probabilities        |
 
-### Practical Tips for Choosing Activation Functions
+#### Practical Tips for Choosing Activation Functions
 
 - **Start simple:**  
   Use **ReLU** for hidden layers and **Softmax** (for multi-class outputs) or **Sigmoid** (for binary outputs).
