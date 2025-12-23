@@ -347,8 +347,8 @@ Yes — in autoencoders or self-supervised learning, the input itself is used as
 
 ### Common Pitfalls in Interview Answers
 
-- ❌ **Incorrect:** "Backprop updates weights directly."  
-- ✅ **Correct:** "Backpropagation computes the gradients; the optimizer (e.g., SGD, Adam) uses those gradients to update weights."
+- **Incorrect:** "Backprop updates weights directly."  
+- **Correct:** "Backpropagation computes the gradients; the optimizer (e.g., SGD, Adam) uses those gradients to update weights."
 
 
 ---

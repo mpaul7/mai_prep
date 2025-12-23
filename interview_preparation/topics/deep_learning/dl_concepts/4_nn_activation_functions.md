@@ -30,7 +30,8 @@ Activation functions introduce non-linearity, enabling the network to learn comp
 - **Pros:**  
   - Smooth gradient, outputs can be interpreted as probabilities.
 - **Cons:**  
-  - Can cause vanishing gradients; 
+  - Can cause vanishing gradients; At higher values of x in either positive or negative side thesloe ($dy/dx$) is zero. 
+  - In reallity we have to backpropagate the error to learn and update the weights. If the slope is zero or very very small, the learning is very slow. This is called vanishing gradients problem. .
   - not zero-centered; 
   - can be slow to converge.
 
@@ -46,10 +47,10 @@ Activation functions introduce non-linearity, enabling the network to learn comp
 - **Pros:**  
   - Zero-centered outputs (helps with convergence).
 - **Cons:**  
-  - Still susceptible to vanishing gradient for large input values.
+  - Still susceptible to vanishing gradient for large input values. Check the explanation in Sigmoid function. 
 
 #### 3. ReLU (Rectified Linear Unit)
-
+- To avoid the vanishing gradient problem, they came up with ReLU function. 
 - **Formula:**  
 
   $$f(x) = \max(0, x)$$
@@ -58,7 +59,7 @@ Activation functions introduce non-linearity, enabling the network to learn comp
 - **Use Cases:**  
   - Hidden layers in most modern neural networks (deep learning, CNNs, etc.).
 - **Pros:**  
-  - Computationally efficient; reduces likelihood of vanishing gradient; drives sparsity.
+  - Computationally efficient; reduces likelihood of vanishing gradient; drives sparsity. On the opposite side, for Sigmoid and Tanh there is some calculation needed to calculate the gradient. 
 - **Cons:**  
   - "Dying ReLU" problem (neurons stuck at 0 for all inputs).
 
@@ -510,7 +511,7 @@ Instead, use **Sigmoid** for binary output.
 
 ## Interview Questions & Answers
 
-### 🟩 Basic Level
+### Basic Level
 
 **Q1. What is the purpose of an activation function in a neural network?**  
 **A:**  
@@ -532,7 +533,7 @@ Softmax converts raw scores (logits) into a probability distribution, making the
 
 ---
 
-### 🟨 Intermediate Level
+### Intermediate Level
 
 **Q4. Why does the ReLU activation function help deep networks train faster?**  
 **A:**  
@@ -559,7 +560,7 @@ GELU provides smooth, probabilistic gating (unlike ReLU’s hard cutoff), which 
 
 ---
 
-### 🟥 Advanced / Theoretical
+### Advanced / Theoretical
 
 **Q8. How does the choice of activation affect gradient propagation?**  
 **A:**  
@@ -581,7 +582,7 @@ Yes. For example, ReLU in hidden layers and Sigmoid or Softmax in the output lay
 _The choice depends on the specific task (classification, regression, etc.)._
 
 
-> **💡 Interview Tip**
+> ** Interview Tip**
 
 When asked **"Which activation function would you choose?"**, don't just name it—**explain your reasoning** to stand out:
 
