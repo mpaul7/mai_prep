@@ -291,11 +291,11 @@ Thus, no matter how many layers you stack, the entire network reduces to a singl
 - **Softmax**
 - **Swish / GELU** (modern)
 
-*Interviewer expects*: Quick recall and ability to name 4–6 correctly.
+*Interviewer expects*: Quick recall and ability to name 4–6 correctly.**
 
 ---
 
-### Q4. What is the difference between **Sigmoid** and **Tanh**?
+**Q4. What is the difference between **Sigmoid** and **Tanh**?
 
 | Property          | Sigmoid                  | Tanh                      |
 |-------------------|-------------------------|---------------------------|
@@ -309,7 +309,7 @@ Thus, no matter how many layers you stack, the entire network reduces to a singl
 
 ---
 
-### Q5. Why is **ReLU** preferred over Sigmoid or Tanh?
+**Q5. Why is **ReLU** preferred over Sigmoid or Tanh?**
 
 **Answer:**
 - Reduces vanishing gradient issue
@@ -322,7 +322,7 @@ Thus, no matter how many layers you stack, the entire network reduces to a singl
 
 ### 2. Intermediate Level Questions
 
-#### Q6. What is the **Vanishing Gradient Problem** and which activations cause it?
+**Q6. What is the **Vanishing Gradient Problem** and which activations cause it?**
 
 **Answer:**  
 In deep networks, gradients shrink exponentially as they propagate backward through Sigmoid or Tanh, leading to slow or no learning in early layers.
@@ -334,7 +334,7 @@ In deep networks, gradients shrink exponentially as they propagate backward thro
 
 ---
 
-#### Q7. What is the **Dying ReLU** problem?
+**Q7. What is the **Dying ReLU** problem?**
 
 **Answer:**  
 If the input to a ReLU neuron is negative, it outputs zero, and its gradient also becomes zero, meaning it never updates again — the neuron “dies”.
@@ -345,7 +345,7 @@ If the input to a ReLU neuron is negative, it outputs zero, and its gradient als
 
 ---
 
-#### Q8. What is the **output range** of different activation functions?
+**Q8. What is the **output range** of different activation functions?**
 
 | Activation   | Output Range    | Typical Use            |
 |--------------|-----------------|------------------------|
@@ -360,7 +360,7 @@ If the input to a ReLU neuron is negative, it outputs zero, and its gradient als
 
 ---
 
-#### Q9. When do we use **Softmax activation**?
+**Q9. When do we use **Softmax activation**?**
 
 **Answer:**  
 Used in the output layer of multi-class classification problems.  
@@ -375,7 +375,7 @@ $$
 
 ---
 
-#### Q10. How do you decide which activation function to use?
+**Q10. How do you decide which activation function to use?**
 
 | Layer Type         | Recommended Activation           |
 |--------------------|---------------------------------|
@@ -391,7 +391,7 @@ $$
 
 ### 3. Advanced / Deep-Dive Questions
 
-#### Q11. Explain the **derivative of ReLU** and why it helps gradient propagation.
+**Q11. Explain the **derivative of ReLU** and why it helps gradient propagation.**
 
 - **Function:** $f(x) = \max(0, x)$
 - **Derivative:**
@@ -409,7 +409,7 @@ Because the gradient is 1 for positive inputs, it propagates efficiently, avoidi
 
 ---
 
-#### Q12. Why is **Softmax** often used with **Cross-Entropy Loss**?
+**Q12. Why is **Softmax** often used with **Cross-Entropy Loss**?**
 
 **Answer:**  
 Softmax converts logits into probabilities; Cross-Entropy measures the difference between predicted and true probability distributions.  
@@ -419,7 +419,7 @@ Together, they stabilize gradients and simplify backpropagation.
 
 ---
 
-#### Q13. What is the **Swish** activation function?
+**Q13. What is the **Swish** activation function?**
 
 **Formula:**
 $$
@@ -438,7 +438,7 @@ Transformers, modern CNNs (like EfficientNet)
 
 ---
 
-#### Q14. Compare **ReLU**, **Leaky ReLU**, and **ELU**.
+**Q14. Compare **ReLU**, **Leaky ReLU**, and **ELU**.**
 
 | Property            | ReLU       | Leaky ReLU | ELU          |
 |---------------------|------------|------------|--------------|
@@ -452,7 +452,7 @@ Transformers, modern CNNs (like EfficientNet)
 
 ---
 
-#### Q15. What is a **non-monotonic activation function**? Give examples.
+**Q15. What is a **non-monotonic activation function**? Give examples.**
 
 **Answer:**  
 A function that is not strictly increasing or decreasing.  
@@ -466,7 +466,7 @@ They allow neurons to suppress weak signals and boost strong ones, improving exp
 
 ###  4. Practical/Scenario-Based Questions
 
-#### Q16. If your network is not converging, what activation function issues might you check?
+**Q16. If your network is not converging, what activation function issues might you check?**
 
 - Check for vanishing gradients (Sigmoid/Tanh)
 - Check for dead neurons (ReLU)
@@ -477,7 +477,7 @@ They allow neurons to suppress weak signals and boost strong ones, improving exp
 
 ---
 
-#### Q17. If you’re designing a network for image classification, which activations would you use?
+**Q17. If you’re designing a network for image classification, which activations would you use?**
 
 - **Hidden layers** → ReLU / Leaky ReLU
 - **Output layer** → Softmax
@@ -486,7 +486,7 @@ They allow neurons to suppress weak signals and boost strong ones, improving exp
 
 ---
 
-#### Q18. What happens if you use **ReLU** in the output layer of binary classification?
+**Q18. What happens if you use **ReLU** in the output layer of binary classification?**
 
 - The output won’t be bounded between 0 and 1.
 - Can’t interpret as probability.
@@ -496,7 +496,7 @@ Instead, use **Sigmoid** for binary output.
 **Interviewer expects:** Concept clarity and application awareness.
 
 
-5. Bonus: Quick Recall Summary Table
+#### 5. Bonus: Quick Recall Summary Table
 
 | Activation   | Range           | Non-linearity | Common Layer         | Known For                |
 |--------------|-----------------|:-------------:|----------------------|--------------------------|
@@ -587,3 +587,4 @@ _The choice depends on the specific task (classification, regression, etc.)._
 When asked **"Which activation function would you choose?"**, don't just name it—**explain your reasoning** to stand out:
 
 > *"I'd use ReLU for hidden layers because it avoids vanishing gradients and promotes sparsity. For the output layer, I'd use Softmax to convert logits to probabilities."*
+

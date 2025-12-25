@@ -1,4 +1,4 @@
-# Neural Network Loss Functions – Data Scientist Interview Guide
+# Neural Network Loss Functions
 
 Loss functions, also called **cost functions** or **objective functions**, quantify how well the predicted outputs of a neural network match target values. Selecting the right loss function for your task is essential for both model performance and correct learning behavior.
 
@@ -23,6 +23,8 @@ Below are the most important loss functions in deep learning, with formulas, use
 ### **A. Mean Squared Error (MSE) Loss**
 
 **Formula:**
+
+
 
 $$
 \text{MSE} = \frac{1}{N} \sum_{i=1}^{N} (y_i - \hat{y}_i)^2
@@ -419,7 +421,7 @@ $$
 
 ---
 
-> **📌 Interviewer expects:** Context-based decision ability.
+> ** Interviewer expects:** Context-based decision ability.
 
 
 
@@ -430,7 +432,6 @@ $$
 
 - Goodfellow et al., Deep Learning (Chapter: Machine Learning Basics)
 - PyTorch & TensorFlow documentation on loss functions
-- [Loss Functions Cheat Sheet (towardsdatascience)](https://towardsdatascience.com/a-closer-look-at-loss-functions-6782ab2a77f0)
 
 ---
 

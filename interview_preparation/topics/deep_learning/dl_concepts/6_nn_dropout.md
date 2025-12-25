@@ -151,9 +151,9 @@ model = Sequential([
 ])
 ```
 
-## Interview Questions on Dropout
+### Interview Questions on Dropout
 
-### 🟩 Basic Level
+#### Basic Level
 
 **Q1: What is dropout in neural networks?**  
 *A:* Dropout is a regularization technique that randomly deactivates neurons during training to prevent overfitting and encourage robust feature learning.
@@ -166,7 +166,7 @@ model = Sequential([
 
 ---
 
-### 🟨 Intermediate Level
+#### Intermediate Level
 
 **Q4: What is the typical range of dropout probability?**  
 *A:* 0.2–0.5 for hidden layers. If too high, it can cause underfitting; if too low, the regularization effect is minimal.
@@ -179,7 +179,7 @@ model = Sequential([
 
 ---
 
-### 🟥 Advanced Level
+#### Advanced Level
 
 **Q7: How do you apply dropout in RNNs or LSTMs?**  
 *A:* Use variational dropout, which applies the same dropout mask at each timestep to preserve temporal dependencies.
@@ -197,7 +197,7 @@ model = Sequential([
 
 ---
 
-### Summary — Dropout Key Points
+#### Summary — Dropout Key Points
 
 
 | Key Concept         |       Takeaway                                         |
@@ -213,7 +213,7 @@ model = Sequential([
 
 
 
-### Practical Tips for Interviews
+#### Practical Tips for Interviews
 
 - **Always justify the dropout probability \(`p`\)**  
   _Example:_ “I’d choose 0.3 in dense layers for a small dataset to prevent overfitting.”
