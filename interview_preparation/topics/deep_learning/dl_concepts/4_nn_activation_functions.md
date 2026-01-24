@@ -398,13 +398,14 @@ $$
 
 - **Function:** $f(x) = \max(0, x)$
 - **Derivative:**
+  
   $$
-  f'(x) =
-    \begin{cases}
-      1 & \text{if } x > 0\\
-      0 & \text{if } x \leq 0
-    \end{cases}
-  $$
+f'(x) =
+\begin{array}{ll}
+1 & \text{if } x > 0 \\
+0 & \text{if } x \le 0
+\end{array}
+$$
 
 Because the gradient is 1 for positive inputs, it propagates efficiently, avoiding vanishing gradients seen in Sigmoid/Tanh.
 
