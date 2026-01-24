@@ -67,11 +67,13 @@ Activation functions introduce non-linearity, enabling the network to learn comp
 
 - **Formula:**  
 
-  $$f(x) =
+  $$
+  f(x) =
     \begin{cases}
       x & \text{if } x \ge 0 \\
       \alpha x & \text{if } x < 0
-    \end{cases}$$
+    \end{cases}
+  $$
 
   (Typically, $\alpha = 0.01$)
 
