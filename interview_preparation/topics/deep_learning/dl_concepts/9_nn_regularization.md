@@ -44,8 +44,8 @@ There are multiple ways to regularize a neural network, mainly divided into:
 - **Formula:**
   
   $$
-  \text{Loss} = \text{Original Loss} + \lambda \sum_{i} w_i^2
-  $$
+\text{Loss} = \text{Original Loss} + \lambda \sum_{i} w_i^2
+$$
  
 - **When to Use:** Default choice—works well in most situations.
 
