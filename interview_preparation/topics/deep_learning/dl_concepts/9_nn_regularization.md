@@ -29,10 +29,10 @@ There are multiple ways to regularize a neural network, mainly divided into:
 - **How It Works:** Adds a penalty equal to the absolute value of the weights to the loss function.
 - **Effect:** Encourages sparsity (many weights become zero).
 - **Formula:**
-- 
+  
    $$
-  \text{Loss} = \text{Original Loss} + \lambda \sum_{i} \lvert w_i \rvert
-  $$
+    \text{Loss} = \text{Original Loss} + \lambda \sum_{i} \lvert w_i \rvert
+   $$
   
 - **When to Use:** When you want a sparse model that ignores some inputs completely.
 
