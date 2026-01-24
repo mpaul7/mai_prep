@@ -567,20 +567,20 @@ P(X = x) = \binom{n}{x} p^x (1-p)^{n-x}
 $$
 
 Where:
-    - \$ n \$: number of trials
-    - \$ x \$: number of successes (can be 0, 1, ..., n)
-    - \$ p \$: probability of success in a single trial
-    - \$ 1-p \$: probability of failure
-    - \$ \binom{n}{x} = \frac{n!}{x!(n-x)!} \$: number of ways to choose \$ x \$ successes from \$ n \$ trials[^45_2][^45_3][^45_5][^45_7]
+    - \$n\$: number of trials
+    - \$x\$: number of successes (can be 0, 1, ..., n)
+    - \$p\$: probability of success in a single trial
+    - \$1-p\$: probability of failure
+    - \$\binom{n}{x} = \frac{n!}{x!(n-x)!}\$: number of ways to choose \$x\$ successes from \$n\$ trials[^45_2][^45_3][^45_5][^45_7]
 
 
 2. **Key Properties**
 
-- **Mean:** \$ \mu = np \$
-- **Variance:** \$ \sigma^2 = np(1-p) \$
-- **Standard Deviation:** \$ \sigma = \sqrt{np(1-p)} \$
-- **Discrete:** Only integer values from 0 to \$ n \$
-- **Symmetry:** If \$ p = 0.5 \$, distribution is symmetric; otherwise, it is skewed.[^45_3][^45_9]
+- **Mean:** \$\mu = np\$
+- **Variance:** \$\sigma^2 = np(1-p)\$
+- **Standard Deviation:** \$\sigma = \sqrt{np(1-p)}\$
+- **Discrete:** Only integer values from 0 to \$n\$
+- **Symmetry:** If \$p = 0.5\$, distribution is symmetric; otherwise, it is skewed.[^45_3][^45_9]
 
 
 3. **Practical Examples**
@@ -665,9 +665,9 @@ P(X = k) = \frac{e^{-\lambda} \lambda^k}{k!}
 $$
 
 Where:
-    - \$ k \$: number of occurrences (0, 1, 2, ...)
-    - \$ \lambda \$: average rate (mean number of events per interval)
-    - \$ e \$: Euler’s number (≈ 2.718)
+    - \$k\$: number of occurrences (0, 1, 2, ...)
+    - \$\lambda\$: average rate (mean number of events per interval)
+    - \$e\$: Euler’s number (≈ 2.718)
 
 
  2. **Key Properties**
