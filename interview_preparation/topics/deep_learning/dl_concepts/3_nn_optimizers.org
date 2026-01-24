@@ -12,6 +12,7 @@ Below are some of the most commonly used optimizers, their use cases, pros, cons
 The most basic optimizer; it updates the weights in the direction that reduces the loss, based on a sample or a batch (not the whole dataset).
 
 **Update Rule:**  
+
 $$
 \theta = \theta - \eta \nabla_{\theta} J(\theta)
 $$  
