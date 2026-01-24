@@ -41,7 +41,8 @@ Improvement over SGD by adding "momentum" — helps optimizer to accelerate in t
 **Update Rule:**  
 
 $$
-v_t = \gamma v_{t-1} + \eta \nabla_{\theta} J(\theta) \\
+v_t = \gamma v_{t-1} + \eta \nabla_{\theta} J(\theta) 
+
 \theta = \theta - v_t
 $$  
 Where $\gamma$ is the momentum parameter (usually 0.9).
@@ -93,13 +94,13 @@ Adam maintains two moving averages:
 - Squared gradient (second moment): $v_t$
 
 $$
-m_t = \beta_1 m_{t-1} + (1 - \beta_1)g_t \\
+m_t = \beta_1 m_{t-1} + (1 - \beta_1)g_t 
 
-v_t = \beta_2 v_{t-1} + (1 - \beta_2)g_t^2 \\
+v_t = \beta_2 v_{t-1} + (1 - \beta_2)g_t^2 
 
-\hat{m}_t = \frac{m_t}{1 - \beta_1^t} \\
+\hat{m}_t = \frac{m_t}{1 - \beta_1^t} 
 
-\hat{v}_t = \frac{v_t}{1 - \beta_2^t} \\
+\hat{v}_t = \frac{v_t}{1 - \beta_2^t} 
 
 \theta = \theta - \eta \frac{\hat{m}_t}{\sqrt{\hat{v}_t} + \epsilon}
 $$
