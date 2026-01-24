@@ -665,6 +665,7 @@ P(X = k) = \frac{e^{-\lambda} \lambda^k}{k!}
 $$
 
 Where:
+
     - \$k\$: number of occurrences (0, 1, 2, ...)
     - \$\lambda\$: average rate (mean number of events per interval)
     - \$e\$: Euler’s number (≈ 2.718)
@@ -672,9 +673,9 @@ Where:
 
  2. **Key Properties**
 
-- **Mean and Variance:** Both equal to \$ \lambda \$
+- **Mean and Variance:** Both equal to \$\lambda\$
 - **Discrete:** Only non-negative integer values
-- **Right-skewed** for small \$ \lambda \$; becomes more symmetric as \$ \lambda \$ increases
+- **Right-skewed** for small \$\lambda\$; becomes more symmetric as \$\lambda\$ increases
 - **Events are independent** and occur at a constant average rate[^46_6][^46_1]
 
 
@@ -689,7 +690,7 @@ Where:
 
 4. **Step-by-Step Example**
 
-**Scenario:** A call center receives an average of 4 calls per minute (\$ \lambda = 4 \$). What is the probability of receiving exactly 6 calls in a minute?
+**Scenario:** A call center receives an average of 4 calls per minute (\$\lambda = 4\$). What is the probability of receiving exactly 6 calls in a minute?
 
 $$
 P(X = 6) = \frac{e^{-4} \cdot 4^6}{6!} = \frac{0.0183 \cdot 4096}{720} \approx 0.1042
