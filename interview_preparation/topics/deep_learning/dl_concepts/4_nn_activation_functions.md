@@ -369,9 +369,6 @@ Used in the output layer of multi-class classification problems.
 It converts raw scores into probabilities that sum to 1.
 
 **Formula:**
-$$
-f(x_i) = \frac{e^{x_i}}{\sum_j e^{x_j}}
-$$
 
 $$
 \text{softmax}(x_i) = \frac{e^{x_i}}{\sum_{j=1}^{n} e^{x_j}}
