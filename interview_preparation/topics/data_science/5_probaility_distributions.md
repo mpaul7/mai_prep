@@ -16,7 +16,7 @@ $$
 f(x) = \frac{1}{\sigma \sqrt{2\pi}} \exp\left(-\frac{(x-\mu)^2}{2\sigma^2}\right)
 $$
 
-Where \$ \mu \$ is the mean, \$ \sigma \$ is the standard deviation.
+Where \$\mu\$ is the mean, \$\sigma\$ is the standard deviation.
 - **Business Impact:** Used for modeling errors/residuals in regression, heights, test scores, and many natural phenomena.
 - **Python Example:**
 
