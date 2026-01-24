@@ -78,7 +78,7 @@ binom_samples = binom.rvs(n=10, p=0.5, size=1000)
 
 ### 4 **Poisson Distribution**
 
-- **Definition:** Models the number of events in a fixed interval, given a known average rate \$ \lambda \$.
+- **Definition:** Models the number of events in a fixed interval, given a known average rate \$\lambda\$.
 - **Formula:**
 
 $$
@@ -97,7 +97,7 @@ poisson_samples = poisson.rvs(mu=3, size=1000)
 
 ### 5 **Multinomial Distribution**
 
-- **Definition:** Generalizes binomial to more than two categories; models counts for each category in \$ n \$ trials.
+- **Definition:** Generalizes binomial to more than two categories; models counts for each category in \$n\$ trials.
 - **Business Impact:** Used in multi-class classification, text classification, and NLP.
 - **Python Example:**
 
@@ -164,7 +164,7 @@ plt.show()
 
 1. **Definition and Formula**
 
-The **normal distribution** (also called Gaussian) is a continuous probability distribution with a symmetric, bell-shaped curve. It is defined by its mean \$ \mu \$ and standard deviation \$ \sigma \$:
+The **normal distribution** (also called Gaussian) is a continuous probability distribution with a symmetric, bell-shaped curve. It is defined by its mean \$\mu\$ and standard deviation \$\sigma\$:
 
 $$
 f(x) = \frac{1}{\sigma \sqrt{2\pi}} \exp\left(-\frac{(x-\mu)^2}{2\sigma^2}\right)
@@ -178,10 +178,10 @@ $$
 
 - **Symmetry:** The curve is symmetric about the mean.
 - **Empirical Rule:**
-    - 68% of data within 1 standard deviation (\$ \mu \pm 1\sigma \$)
-    - 95% within 2 standard deviations (\$ \mu \pm 2\sigma \$)
-    - 99.7% within 3 standard deviations (\$ \mu \pm 3\sigma \$)
-- **Linear Transformations:** If \$ X \$ is normal, so is \$ aX + b \$.
+    - 68% of data within 1 standard deviation (\$\mu \pm 1\sigma\$)
+    - 95% within 2 standard deviations (\$\mu \pm 2\sigma\$)
+    - 99.7% within 3 standard deviations (\$\mu \pm 3\sigma\$)
+- **Linear Transformations:** If \$X\$ is normal, so is \$aX + b\$.
 - **Multivariate Normal:** Extends to multiple variables, modeling joint distributions with a mean vector and covariance matrix.
 
 
@@ -194,11 +194,11 @@ $$
 
 **Numerical Example**
 
-Suppose adult male weights are normally distributed with \$ \mu = 70 \$ kg and \$ \sigma = 5 \$ kg. What proportion weigh more than 75 kg?
+Suppose adult male weights are normally distributed with \$\mu = 70\$ kg and \$\sigma = 5\$ kg. What proportion weigh more than 75 kg?
 
-- **Step 1:** Calculate Z-score: \$ Z = \frac{75 - 70}{5} = 1 \$
+- **Step 1:** Calculate Z-score: \$Z = \frac{75 - 70}{5} = 1\$
 - **Step 2:** Area to left of Z=1 is about 0.8413 (from Z-table)
-- **Step 3:** Proportion above 75 kg: \$ 1 - 0.8413 = 0.1587 \$ (about 15.87%)[^41_5]
+- **Step 3:** Proportion above 75 kg: \$1 - 0.8413 = 0.1587\$ (about 15.87%)[^41_5]
 
 
 4. **Applications in Machine Learning**
@@ -247,7 +247,7 @@ plt.show()
 | Property | Value/Use Case |
 | :-- | :-- |
 | Shape | Symmetric, bell-shaped |
-| Parameters | Mean (\$ \mu $), Std Dev ($ \sigma \$) |
+| Parameters | Mean (\$\mu$), Std Dev ($\sigma\$) |
 | ML Applications | Regression, GMM, PCA, anomaly detection |
 | Business Impact | Forecasting, quality control, risk |
 
