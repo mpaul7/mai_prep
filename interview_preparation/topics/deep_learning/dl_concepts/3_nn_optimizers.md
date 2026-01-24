@@ -1,4 +1,4 @@
-** Neural Network Optimizers
+## Neural Network Optimizers
 
 Optimizers are algorithms or methods used to change the attributes of your neural network — such as weights and learning rate — to reduce the losses. Their goal is to find the minimum of the loss function. Choosing the right optimizer can have a significant impact on training speed, convergence, and final performance.
 
@@ -6,13 +6,12 @@ Below are some of the most commonly used optimizers, their use cases, pros, cons
 
 ---
 
-*** 1. **Stochastic Gradient Descent (SGD)**
+### 1. **Stochastic Gradient Descent (SGD)**
 
-##What is it?  
+**What is it?**  
 The most basic optimizer; it updates the weights in the direction that reduces the loss, based on a sample or a batch (not the whole dataset).
 
-**Update Rule:  
-
+**Update Rule:**  
 $$
 \theta = \theta - \eta \nabla_{\theta} J(\theta)
 $$  
@@ -33,7 +32,7 @@ Where $\theta$ are the weights, $\eta$ is the learning rate, and $J$ is the loss
 
 ---
 
-*** 2. **SGD with Momentum**
+### 2. **SGD with Momentum**
 
 **What is it?**  
 Improvement over SGD by adding "momentum" — helps optimizer to accelerate in the right direction, dampens oscillations.
@@ -55,7 +54,7 @@ Where $\gamma$ is the momentum parameter (usually 0.9).
 
 ---
 
-*** 3. **RMSProp**
+### 3. **RMSProp**
 
 **What is it?**  
 Optimizer that adapts the learning rate for each parameter. It maintains a moving average of the squared gradients and divides the learning rate by the root of this average.
@@ -79,7 +78,7 @@ $$
 
 ---
 
-*** 4. **Adam (Adaptive Moment Estimation)**
+### 4. **Adam (Adaptive Moment Estimation)**
 
 **What is it?**  
 Very popular optimizer that combines ideas from Momentum and RMSProp. It computes adaptive learning rates for each parameter and also takes the momentum of gradients into account.
@@ -114,7 +113,7 @@ $$
 
 ---
 
-*** 5. **Adagrad**
+### 5. **Adagrad**
 
 **What is it?**  
 Adapts the learning rate for each parameter, making larger updates for infrequent and smaller updates for frequent parameters. Well-suited for sparse data.
@@ -128,7 +127,7 @@ Adapts the learning rate for each parameter, making larger updates for infrequen
 
 ---
 
-*** 6. **Adadelta & Adamax & Nadam**
+### 6. **Adadelta & Adamax & Nadam**
 
 Variants and improvements on the methods above, but generally Adam and RMSProp are most frequently used in practice.  
 - **Adadelta:** Solves the decaying learning rate problem of Adagrad (doesn't require initial learning rate)
@@ -137,7 +136,7 @@ Variants and improvements on the methods above, but generally Adam and RMSProp a
 
 ---
 
-** Comparative Study
+## Comparative Study
 
 | Optimizer      | Adaptive LR | Momentum | Memory | Robustness | Typical Use Cases                      |
 |----------------|-------------|----------|--------|------------|----------------------------------------|
@@ -154,7 +153,7 @@ Variants and improvements on the methods above, but generally Adam and RMSProp a
 
 ---
 
-*** **Summary Table: Pros and Cons**
+### **Summary Table: Pros and Cons**
 
 | Optimizer | Pros | Cons |
 |-----------|------|------|
@@ -166,7 +165,7 @@ Variants and improvements on the methods above, but generally Adam and RMSProp a
 
 ---
 
-** How to Select an Optimizer for an Interview
+## How to Select an Optimizer for an Interview
 
 - **Start with Adam** for most problems.
 - **Use SGD (with/without momentum) when seeking best generalization or on smaller/fine-tuned models.**
@@ -176,13 +175,13 @@ Variants and improvements on the methods above, but generally Adam and RMSProp a
 
 ---
 
-*** **Example: Using Different Optimizers in Keras**
+### **Example: Using Different Optimizers in Keras**
 
 ```python
 from tensorflow.keras.optimizers import SGD, RMSprop, Adam
 
 model.compile(
-    optimizer=Adam(learning_rate=0.001),        * Try RMSprop() or SGD(momentum=0.9) for comparison
+    optimizer=Adam(learning_rate=0.001),        # Try RMSprop() or SGD(momentum=0.9) for comparison
     loss='categorical_crossentropy',
     metrics=['accuracy']
 )
@@ -192,7 +191,7 @@ model.compile(
 
 In summary, optimizers are essential for efficient and effective training of neural networks. Understanding their differences and trade-offs is crucial for making informed choices — especially in data science interviews.
 
-*** Practical Comparative Summary (Short)
+### Practical Comparative Summary (Short)
 
 - **SGD with Momentum**:  
   - Slower per update, but often yields the best generalization if well-tuned.  
@@ -209,7 +208,7 @@ In summary, optimizers are essential for efficient and effective training of neu
 - **Second-Order Methods**:  
   - Seldom used for large deep networks due to computational cost.
 
-*** Important Practical Hyperparameters & Techniques
+### Important Practical Hyperparameters & Techniques
 
 **Learning Rate ($\eta$):**  
 - Most important hyperparameter for training.
@@ -236,7 +235,7 @@ In summary, optimizers are essential for efficient and effective training of neu
 **Gradient Clipping:**  
 - Clip gradients by norm (e.g., 1.0), especially helpful for RNNs or to prevent unstable training.
 
-*** How to Choose an Optimizer — Interview-Style Answer
+### How to Choose an Optimizer — Interview-Style Answer
 
 - **Start with AdamW** for fast convergence and easy defaults, especially when prototyping with Transformers or CNNs.
 - **If final performance or generalization is critical** (and you have sufficient compute), consider training with **SGD + momentum** (along with a tuned learning rate schedule and appropriate weight decay). Many papers report the best final results with SGD.
@@ -247,7 +246,7 @@ In summary, optimizers are essential for efficient and effective training of neu
 - **For sparse features** (e.g., embedding tasks), **Adagrad** or other adaptive optimizers may be beneficial.
 - **Always use learning rate schedules and weight decay** appropriately — choosing the right optimizer alone is rarely enough for optimal training.
 
-*** Common Troubleshooting & Interview Talking Points
+### Common Troubleshooting & Interview Talking Points
 
 - **Loss not decreasing:**  
   - Learning rate may be too large. Try reducing it by 10x.
@@ -278,12 +277,12 @@ In summary, optimizers are essential for efficient and effective training of neu
   - Change the weight initialization.
 
 
-  *** Two-Minute Interview Summary:
+  ### Two-Minute Interview Summary:
 
   Optimizers control how model parameters move using gradients. For fast prototyping and stable training, I usually start with **AdamW** (default learning rate 1e-3, use weight decay). For final production runs where generalization matters, switching to **SGD with momentum** and a well-designed learning rate schedule often yields the best final accuracy. Key hyperparameters to tune are learning rate, weight decay, momentum, batch size, and using warmup or learning rate schedulers. I am ready to justify optimizer choices with experiments—often, a combination (AdamW for warm-up/pretraining; SGD for fine-tuning) is best.
 
 
-*** Comparison Table: Major Neural Network Optimizers
+### Comparison Table: Major Neural Network Optimizers
 
 | Optimizer | Update Equation | Intuition / Idea | Best Used For | Pros | Cons |
 |-----------|----------------|------------------|---------------|------|------|
@@ -297,7 +296,7 @@ In summary, optimizers are essential for efficient and effective training of neu
 
 *Note: $\eta$ = learning rate, $\gamma$ = momentum, $\beta, \beta_1, \beta_2$ = decay rates, $g_t$ = gradient, $m_t, v_t$ = momentum and RMS averages.*
 
-*** Recommended Usage Guidelines
+### Recommended Usage Guidelines
 
 | Scenario                                               | Recommended Optimizer      | Notes                                                                                  |
 |--------------------------------------------------------|---------------------------|----------------------------------------------------------------------------------------|
@@ -313,7 +312,7 @@ In summary, optimizers are essential for efficient and effective training of neu
 *Tip: Always tune learning rate and try a scheduler (cosine, one-cycle, step) for best results.*
 
 
-*** Key Hyperparameters to Remember
+### Key Hyperparameters to Remember
 
 | Hyperparameter              | Typical Value                    | Purpose                     |
 |----------------------------|----------------------------------|-----------------------------|
@@ -326,7 +325,7 @@ In summary, optimizers are essential for efficient and effective training of neu
 
 
 
-*** Recommended Usage Guidelines
+### Recommended Usage Guidelines
 
 | Scenario                          | Recommended Optimizer       | Notes                               |
 |------------------------------------|----------------------------|-------------------------------------|
@@ -338,7 +337,7 @@ In summary, optimizers are essential for efficient and effective training of neu
 | Small dataset, deterministic       | L-BFGS                     | Use CPU, few iterations             |
 | Training unstable                  | RAdam / AdaBound           | Stabilize early steps               |
 
-*** Learning Rate Schedules
+### Learning Rate Schedules
 
 - **Step Decay:**  
   Multiply the learning rate by 0.1 every few epochs.
@@ -358,7 +357,7 @@ In summary, optimizers are essential for efficient and effective training of neu
 - **Cyclical Learning Rate (CLR):**  
   The learning rate oscillates between lower and upper bounds to encourage better exploration.
 
-*** Practical Tips
+### Practical Tips
 
 - **Start with AdamW**, then switch to **SGD + Momentum** for best generalization.
 - **Monitor the training curve:**  
@@ -367,7 +366,7 @@ In summary, optimizers are essential for efficient and effective training of neu
 - **Combine with BatchNorm, Weight Decay, and Dropout** for improved stability.
 - **Always check gradient norms** to detect vanishing or exploding gradients.
 
-*** Interview Questions & Model Answers
+### Interview Questions & Model Answers
 
 **Q1: Why is Adam so popular in deep learning?**  
 Adam combines momentum and adaptive learning rate methods. It converges quickly with minimal tuning and is robust to gradient noise—making it ideal for large-scale, high-dimensional problems.
@@ -399,7 +398,7 @@ If training is too slow, try increasing the learning rate or momentum.
 
 ---
 
-*** Interview Questions & Model Answers: Neural Network Optimizers
+### Interview Questions & Model Answers: Neural Network Optimizers
 
 **Q1: What is the purpose of an optimizer in deep learning?**  
 *The optimizer updates the model’s weights to minimize the loss function by computing gradients and applying update rules, enabling the network to learn from data.*
