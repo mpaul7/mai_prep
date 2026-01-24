@@ -66,7 +66,7 @@ model.fit(x_train, y_train, epochs=5, batch_size=32, verbose=2)
 test_loss, test_acc = model.evaluate(x_test, y_test, verbose=0)
 print(f"Test Accuracy: {test_acc:.4f}")
 ```
-/* This code builds and trains a simple neural network to classify MNIST digits. */
+/*This code builds and trains a simple neural network to classify MNIST digits.*/
 
 
 
