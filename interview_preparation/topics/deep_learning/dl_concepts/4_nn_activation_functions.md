@@ -373,6 +373,10 @@ $$
 f(x_i) = \frac{e^{x_i}}{\sum_j e^{x_j}}
 $$
 
+$$
+\text{softmax}(x_i) = \frac{e^{x_i}}{\sum_{j=1}^{n} e^{x_j}}
+$$
+
 **Interviewer expects:** Clear mention of multi-class probability interpretation.
 
 ---
