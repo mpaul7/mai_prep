@@ -42,7 +42,7 @@ $$
 P(X=1) = p, \quad P(X=0) = 1-p
 $$
 
-Where \$ p \$ is the probability of success.
+Where \$p\$ is the probability of success.
 - **Business Impact:** Used in binary classification (e.g., churn prediction, email spam detection).
 - **Python Example:**
 
@@ -64,7 +64,7 @@ $$
 P(r) = \binom{n}{r} p^r (1-p)^{n-r}
 $$
 
-Where \$ n \$ is number of trials, \$ r \$ is number of successes, \$ p \$ is probability of success.
+Where \$n\$ is number of trials, \$r\$ is number of successes, \$p\$ is probability of success.
 - **Business Impact:** Used for modeling conversion rates, A/B testing, and event counts.
 - **Python Example:**
 
@@ -170,8 +170,8 @@ $$
 f(x) = \frac{1}{\sigma \sqrt{2\pi}} \exp\left(-\frac{(x-\mu)^2}{2\sigma^2}\right)
 $$
 
-- \$ \mu \$: Center of the distribution (mean)
-- \$ \sigma \$: Spread (standard deviation)
+- \$\mu\$: Center of the distribution (mean)
+- \$\sigma\$: Spread (standard deviation)
 
 
 2. **Key Properties**
@@ -310,7 +310,7 @@ The normal distribution is one of the most common and important probability dist
 $$
 z = \frac{90 - 75}{7.5} = 2.00
 $$
-- **Step 2:** Look up the probability for \$ z = 2.00 \$ in the standard normal table: \$ P(Z < 2.00) = 0.9772 \$.
+- **Step 2:** Look up the probability for \$z = 2.00\$ in the standard normal table: \$P(Z < 2.00) = 0.9772\$.
 - **Interpretation:** There is a 97.7% chance that a randomly selected candidate will have marks less than 90.[^42_2]
 
 ***
@@ -340,7 +340,7 @@ print(f"Probability of marks < 90: {prob:.4f}")  # Output: 0.9772
 
 ## 1. **Definition and Formula**
 
-The **Bernoulli distribution** models a single trial with only two possible outcomes: success (1) or failure (0). It is parameterized by \$ p \$, the probability of success.
+The **Bernoulli distribution** models a single trial with only two possible outcomes: success (1) or failure (0). It is parameterized by \$p\$, the probability of success.
 
 - **Probability Mass Function:**
 
@@ -348,20 +348,20 @@ $$
 P(X = x) = p^x (1-p)^{1-x}, \quad x \in \{0, 1\}
 $$
 
-Where \$ p \$ is the probability of success, \$ 1-p \$ is the probability of failure.
+Where \$p\$ is the probability of success, \$1-p\$ is the probability of failure.
 
 
 ## 2. **Key Properties**
 
 - **Binary outcomes:** Only two possible results (e.g., heads/tails, pass/fail, yes/no).
-- **Mean:** \$ \mu = p \$
-- **Variance:** \$ \sigma^2 = p(1-p) \$
-- **Symmetry:** If \$ p = 0.5 \$, outcomes are equally likely; otherwise, the distribution is skewed.
+- **Mean:** \$\mu = p\$
+- **Variance:** \$\sigma^2 = p(1-p)\$
+- **Symmetry:** If \$p = 0.5\$, outcomes are equally likely; otherwise, the distribution is skewed.
 
 
 ## 3. **Practical Examples**
 
-- **Coin Toss:** Probability of heads (\$ p = 0.5 \$).
+- **Coin Toss:** Probability of heads (\$p = 0.5\$).
 - **Quality Control:** Whether a product passes (1) or fails (0) inspection.
 - **Medical Testing:** Whether a patient tests positive (1) or negative (0) for a disease.
 - **Customer Churn:** Whether a customer leaves (1) or stays (0).
