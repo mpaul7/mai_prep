@@ -39,6 +39,7 @@ Where $\theta$ are the weights, $\eta$ is the learning rate, and $J$ is the loss
 Improvement over SGD by adding "momentum" — helps optimizer to accelerate in the right direction, dampens oscillations.
 
 **Update Rule:**  
+
 $$
 v_t = \gamma v_{t-1} + \eta \nabla_{\theta} J(\theta) \\
 \theta = \theta - v_t
@@ -61,6 +62,7 @@ Where $\gamma$ is the momentum parameter (usually 0.9).
 Optimizer that adapts the learning rate for each parameter. It maintains a moving average of the squared gradients and divides the learning rate by the root of this average.
 
 **Update Rule:**  
+
 $$
 E[g^2]_t = \beta E[g^2]_{t-1} + (1 - \beta)g_t^2 \\
 \theta = \theta - \frac{\eta}{\sqrt{E[g^2]_t} + \epsilon} g_t
@@ -85,6 +87,7 @@ $$
 Very popular optimizer that combines ideas from Momentum and RMSProp. It computes adaptive learning rates for each parameter and also takes the momentum of gradients into account.
 
 **Update Rule:**  
+
 Adam maintains two moving averages:  
 - Gradient (first moment): $m_t$  
 - Squared gradient (second moment): $v_t$
