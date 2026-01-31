@@ -344,10 +344,10 @@ When your regression model is strong (high R-squared, low error metrics, signifi
     - *Business meaning:* If $R^2$ is $0.85$, your model explains $85%$ of the variation in sales based on predictors like advertising spend. This means you can confidently use the model for forecasting, budgeting, and strategic planning.
     - *Impact:* High $R^2$ supports data-driven decisions, such as allocating marketing budgets or predicting inventory needs.
 - **Regression Coefficients (Slope, Intercept):**
-    - *Business meaning:* The slope quantifies how much sales increase for each unit of ad spend. If the slope is $2,000$, every $\$1,000$ increase in ad spend is expected to boost sales by $\$2,000$.
+    - *Business meaning:* The slope quantifies how much sales increase for each unit of ad spend. If the slope is $2,000$, every \$1,000$ increase in ad spend is expected to boost sales by \$2,000$.
     - *Impact:* Use this to estimate ROI and justify marketing investments.
 - **Error Metrics (MAE, RMSE):**
-    - *Business meaning:* If RMSE is $\$5,000$, your sales predictions are typically off by $\$5,000$. If this is within your business's risk tolerance, the model is actionable.
+    - *Business meaning:* If RMSE is \$5,000$, your sales predictions are typically off by \$5,000$. If this is within your business's risk tolerance, the model is actionable.
     - *Impact:* Helps set realistic expectations for forecast accuracy and manage risk.
 - **P-values:**
     - *Business meaning:* Low p-values ($<0.05$) for coefficients mean those predictors have a statistically significant impact on sales.

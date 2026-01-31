@@ -12,6 +12,7 @@ Below are some of the most commonly used optimizers, their use cases, pros, cons
 The most basic optimizer; it updates the weights in the direction that reduces the loss, based on a sample or a batch (not the whole dataset).
 
 **Update Rule:**  
+
 $$
 \theta = \theta - \eta \nabla_{\theta} J(\theta)
 $$  
@@ -38,8 +39,10 @@ Where $\theta$ are the weights, $\eta$ is the learning rate, and $J$ is the loss
 Improvement over SGD by adding "momentum" — helps optimizer to accelerate in the right direction, dampens oscillations.
 
 **Update Rule:**  
+
 $$
-v_t = \gamma v_{t-1} + \eta \nabla_{\theta} J(\theta) \\
+v_t = \gamma v_{t-1} + \eta \nabla_{\theta} J(\theta) 
+
 \theta = \theta - v_t
 $$  
 Where $\gamma$ is the momentum parameter (usually 0.9).
@@ -60,6 +63,7 @@ Where $\gamma$ is the momentum parameter (usually 0.9).
 Optimizer that adapts the learning rate for each parameter. It maintains a moving average of the squared gradients and divides the learning rate by the root of this average.
 
 **Update Rule:**  
+
 $$
 E[g^2]_t = \beta E[g^2]_{t-1} + (1 - \beta)g_t^2 \\
 \theta = \theta - \frac{\eta}{\sqrt{E[g^2]_t} + \epsilon} g_t
@@ -84,15 +88,20 @@ $$
 Very popular optimizer that combines ideas from Momentum and RMSProp. It computes adaptive learning rates for each parameter and also takes the momentum of gradients into account.
 
 **Update Rule:**  
+
 Adam maintains two moving averages:  
 - Gradient (first moment): $m_t$  
 - Squared gradient (second moment): $v_t$
 
 $$
-m_t = \beta_1 m_{t-1} + (1 - \beta_1)g_t \\
-v_t = \beta_2 v_{t-1} + (1 - \beta_2)g_t^2 \\
-\hat{m}_t = \frac{m_t}{1 - \beta_1^t} \\
-\hat{v}_t = \frac{v_t}{1 - \beta_2^t} \\
+m_t = \beta_1 m_{t-1} + (1 - \beta_1)g_t 
+
+v_t = \beta_2 v_{t-1} + (1 - \beta_2)g_t^2 
+
+\hat{m}_t = \frac{m_t}{1 - \beta_1^t} 
+
+\hat{v}_t = \frac{v_t}{1 - \beta_2^t} 
+
 \theta = \theta - \eta \frac{\hat{m}_t}{\sqrt{\hat{v}_t} + \epsilon}
 $$
 

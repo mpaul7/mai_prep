@@ -66,12 +66,14 @@ Activation functions introduce non-linearity, enabling the network to learn comp
 #### 4. Leaky ReLU (Leaky Rectified Linear Unit)
 
 - **Formula:**  
-
-  $$f(x) =
-    \begin{cases}
-      x & \text{if } x \ge 0 \\
-      \alpha x & \text{if } x < 0
-    \end{cases}$$
+  
+$$
+f(x) =
+\begin{array}{ll}
+x & \text{if } x \ge 0 \\
+\alpha x & \text{if } x < 0
+\end{array}
+$$
 
   (Typically, $\alpha = 0.01$)
 
@@ -367,8 +369,9 @@ Used in the output layer of multi-class classification problems.
 It converts raw scores into probabilities that sum to 1.
 
 **Formula:**
+
 $$
-f(x_i) = \frac{e^{x_i}}{\sum_j e^{x_j}}
+\text{softmax}(x_i) = \frac{e^{x_i}}{\sum_{j=1}^{n} e^{x_j}}
 $$
 
 **Interviewer expects:** Clear mention of multi-class probability interpretation.
@@ -395,12 +398,13 @@ $$
 
 - **Function:** $f(x) = \max(0, x)$
 - **Derivative:**
+  
   $$
-  f'(x) =
-    \begin{cases}
-      1 & \text{if } x > 0\\
-      0 & \text{if } x \leq 0
-    \end{cases}
+    f'(x) =
+    \begin{array}{ll}
+    1 & \text{if } x > 0 \\
+    0 & \text{if } x \le 0
+    \end{array}
   $$
 
 Because the gradient is 1 for positive inputs, it propagates efficiently, avoiding vanishing gradients seen in Sigmoid/Tanh.

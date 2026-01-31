@@ -16,7 +16,7 @@ $$
 f(x) = \frac{1}{\sigma \sqrt{2\pi}} \exp\left(-\frac{(x-\mu)^2}{2\sigma^2}\right)
 $$
 
-Where \$ \mu \$ is the mean, \$ \sigma \$ is the standard deviation.
+Where \$\mu\$ is the mean, \$\sigma\$ is the standard deviation.
 - **Business Impact:** Used for modeling errors/residuals in regression, heights, test scores, and many natural phenomena.
 - **Python Example:**
 
@@ -42,7 +42,7 @@ $$
 P(X=1) = p, \quad P(X=0) = 1-p
 $$
 
-Where \$ p \$ is the probability of success.
+Where \$p\$ is the probability of success.
 - **Business Impact:** Used in binary classification (e.g., churn prediction, email spam detection).
 - **Python Example:**
 
@@ -64,7 +64,7 @@ $$
 P(r) = \binom{n}{r} p^r (1-p)^{n-r}
 $$
 
-Where \$ n \$ is number of trials, \$ r \$ is number of successes, \$ p \$ is probability of success.
+Where \$n\$ is number of trials, \$r\$ is number of successes, \$p\$ is probability of success.
 - **Business Impact:** Used for modeling conversion rates, A/B testing, and event counts.
 - **Python Example:**
 
@@ -78,7 +78,7 @@ binom_samples = binom.rvs(n=10, p=0.5, size=1000)
 
 ### 4 **Poisson Distribution**
 
-- **Definition:** Models the number of events in a fixed interval, given a known average rate \$ \lambda \$.
+- **Definition:** Models the number of events in a fixed interval, given a known average rate \$\lambda\$.
 - **Formula:**
 
 $$
@@ -97,7 +97,7 @@ poisson_samples = poisson.rvs(mu=3, size=1000)
 
 ### 5 **Multinomial Distribution**
 
-- **Definition:** Generalizes binomial to more than two categories; models counts for each category in \$ n \$ trials.
+- **Definition:** Generalizes binomial to more than two categories; models counts for each category in \$n\$ trials.
 - **Business Impact:** Used in multi-class classification, text classification, and NLP.
 - **Python Example:**
 
@@ -164,24 +164,24 @@ plt.show()
 
 1. **Definition and Formula**
 
-The **normal distribution** (also called Gaussian) is a continuous probability distribution with a symmetric, bell-shaped curve. It is defined by its mean \$ \mu \$ and standard deviation \$ \sigma \$:
+The **normal distribution** (also called Gaussian) is a continuous probability distribution with a symmetric, bell-shaped curve. It is defined by its mean \$\mu\$ and standard deviation \$\sigma\$:
 
 $$
 f(x) = \frac{1}{\sigma \sqrt{2\pi}} \exp\left(-\frac{(x-\mu)^2}{2\sigma^2}\right)
 $$
 
-- \$ \mu \$: Center of the distribution (mean)
-- \$ \sigma \$: Spread (standard deviation)
+- \$\mu\$: Center of the distribution (mean)
+- \$\sigma\$: Spread (standard deviation)
 
 
 2. **Key Properties**
 
 - **Symmetry:** The curve is symmetric about the mean.
 - **Empirical Rule:**
-    - 68% of data within 1 standard deviation (\$ \mu \pm 1\sigma \$)
-    - 95% within 2 standard deviations (\$ \mu \pm 2\sigma \$)
-    - 99.7% within 3 standard deviations (\$ \mu \pm 3\sigma \$)
-- **Linear Transformations:** If \$ X \$ is normal, so is \$ aX + b \$.
+    - 68% of data within 1 standard deviation (\$\mu \pm 1\sigma\$)
+    - 95% within 2 standard deviations (\$\mu \pm 2\sigma\$)
+    - 99.7% within 3 standard deviations (\$\mu \pm 3\sigma\$)
+- **Linear Transformations:** If \$X\$ is normal, so is \$aX + b\$.
 - **Multivariate Normal:** Extends to multiple variables, modeling joint distributions with a mean vector and covariance matrix.
 
 
@@ -194,11 +194,11 @@ $$
 
 **Numerical Example**
 
-Suppose adult male weights are normally distributed with \$ \mu = 70 \$ kg and \$ \sigma = 5 \$ kg. What proportion weigh more than 75 kg?
+Suppose adult male weights are normally distributed with \$\mu = 70\$ kg and \$\sigma = 5\$ kg. What proportion weigh more than 75 kg?
 
-- **Step 1:** Calculate Z-score: \$ Z = \frac{75 - 70}{5} = 1 \$
+- **Step 1:** Calculate Z-score: \$Z = \frac{75 - 70}{5} = 1\$
 - **Step 2:** Area to left of Z=1 is about 0.8413 (from Z-table)
-- **Step 3:** Proportion above 75 kg: \$ 1 - 0.8413 = 0.1587 \$ (about 15.87%)[^41_5]
+- **Step 3:** Proportion above 75 kg: \$1 - 0.8413 = 0.1587\$ (about 15.87%)[^41_5]
 
 
 4. **Applications in Machine Learning**
@@ -247,7 +247,7 @@ plt.show()
 | Property | Value/Use Case |
 | :-- | :-- |
 | Shape | Symmetric, bell-shaped |
-| Parameters | Mean (\$ \mu $), Std Dev ($ \sigma \$) |
+| Parameters | Mean (\$\mu$), Std Dev ($\sigma\$) |
 | ML Applications | Regression, GMM, PCA, anomaly detection |
 | Business Impact | Forecasting, quality control, risk |
 
@@ -310,7 +310,7 @@ The normal distribution is one of the most common and important probability dist
 $$
 z = \frac{90 - 75}{7.5} = 2.00
 $$
-- **Step 2:** Look up the probability for \$ z = 2.00 \$ in the standard normal table: \$ P(Z < 2.00) = 0.9772 \$.
+- **Step 2:** Look up the probability for \$z = 2.00\$ in the standard normal table: \$P(Z < 2.00) = 0.9772\$.
 - **Interpretation:** There is a 97.7% chance that a randomly selected candidate will have marks less than 90.[^42_2]
 
 ***
@@ -340,7 +340,7 @@ print(f"Probability of marks < 90: {prob:.4f}")  # Output: 0.9772
 
 ## 1. **Definition and Formula**
 
-The **Bernoulli distribution** models a single trial with only two possible outcomes: success (1) or failure (0). It is parameterized by \$ p \$, the probability of success.
+The **Bernoulli distribution** models a single trial with only two possible outcomes: success (1) or failure (0). It is parameterized by \$p\$, the probability of success.
 
 - **Probability Mass Function:**
 
@@ -348,20 +348,20 @@ $$
 P(X = x) = p^x (1-p)^{1-x}, \quad x \in \{0, 1\}
 $$
 
-Where \$ p \$ is the probability of success, \$ 1-p \$ is the probability of failure.
+Where \$p\$ is the probability of success, \$1-p\$ is the probability of failure.
 
 
 ## 2. **Key Properties**
 
 - **Binary outcomes:** Only two possible results (e.g., heads/tails, pass/fail, yes/no).
-- **Mean:** \$ \mu = p \$
-- **Variance:** \$ \sigma^2 = p(1-p) \$
-- **Symmetry:** If \$ p = 0.5 \$, outcomes are equally likely; otherwise, the distribution is skewed.
+- **Mean:** \$\mu = p\$
+- **Variance:** \$\sigma^2 = p(1-p)\$
+- **Symmetry:** If \$p = 0.5\$, outcomes are equally likely; otherwise, the distribution is skewed.
 
 
 ## 3. **Practical Examples**
 
-- **Coin Toss:** Probability of heads (\$ p = 0.5 \$).
+- **Coin Toss:** Probability of heads (\$p = 0.5\$).
 - **Quality Control:** Whether a product passes (1) or fails (0) inspection.
 - **Medical Testing:** Whether a patient tests positive (1) or negative (0) for a disease.
 - **Customer Churn:** Whether a customer leaves (1) or stays (0).
@@ -567,20 +567,20 @@ P(X = x) = \binom{n}{x} p^x (1-p)^{n-x}
 $$
 
 Where:
-    - \$ n \$: number of trials
-    - \$ x \$: number of successes (can be 0, 1, ..., n)
-    - \$ p \$: probability of success in a single trial
-    - \$ 1-p \$: probability of failure
-    - \$ \binom{n}{x} = \frac{n!}{x!(n-x)!} \$: number of ways to choose \$ x \$ successes from \$ n \$ trials[^45_2][^45_3][^45_5][^45_7]
+    - \$n\$: number of trials
+    - \$x\$: number of successes (can be 0, 1, ..., n)
+    - \$p\$: probability of success in a single trial
+    - \$1-p\$: probability of failure
+    - \$\binom{n}{x} = \frac{n!}{x!(n-x)!}\$: number of ways to choose \$x\$ successes from \$n\$ trials[^45_2][^45_3][^45_5][^45_7]
 
 
 2. **Key Properties**
 
-- **Mean:** \$ \mu = np \$
-- **Variance:** \$ \sigma^2 = np(1-p) \$
-- **Standard Deviation:** \$ \sigma = \sqrt{np(1-p)} \$
-- **Discrete:** Only integer values from 0 to \$ n \$
-- **Symmetry:** If \$ p = 0.5 \$, distribution is symmetric; otherwise, it is skewed.[^45_3][^45_9]
+- **Mean:** \$\mu = np\$
+- **Variance:** \$\sigma^2 = np(1-p)\$
+- **Standard Deviation:** \$\sigma = \sqrt{np(1-p)}\$
+- **Discrete:** Only integer values from 0 to \$n\$
+- **Symmetry:** If \$p = 0.5\$, distribution is symmetric; otherwise, it is skewed.[^45_3][^45_9]
 
 
 3. **Practical Examples**
@@ -665,16 +665,17 @@ P(X = k) = \frac{e^{-\lambda} \lambda^k}{k!}
 $$
 
 Where:
-    - \$ k \$: number of occurrences (0, 1, 2, ...)
-    - \$ \lambda \$: average rate (mean number of events per interval)
-    - \$ e \$: Euler’s number (≈ 2.718)
+
+    - \$k\$: number of occurrences (0, 1, 2, ...)
+    - \$\lambda\$: average rate (mean number of events per interval)
+    - \$e\$: Euler’s number (≈ 2.718)
 
 
  2. **Key Properties**
 
-- **Mean and Variance:** Both equal to \$ \lambda \$
+- **Mean and Variance:** Both equal to \$\lambda\$
 - **Discrete:** Only non-negative integer values
-- **Right-skewed** for small \$ \lambda \$; becomes more symmetric as \$ \lambda \$ increases
+- **Right-skewed** for small \$\lambda\$; becomes more symmetric as \$\lambda\$ increases
 - **Events are independent** and occur at a constant average rate[^46_6][^46_1]
 
 
@@ -689,7 +690,7 @@ Where:
 
 4. **Step-by-Step Example**
 
-**Scenario:** A call center receives an average of 4 calls per minute (\$ \lambda = 4 \$). What is the probability of receiving exactly 6 calls in a minute?
+**Scenario:** A call center receives an average of 4 calls per minute (\$\lambda = 4\$). What is the probability of receiving exactly 6 calls in a minute?
 
 $$
 P(X = 6) = \frac{e^{-4} \cdot 4^6}{6!} = \frac{0.0183 \cdot 4096}{720} \approx 0.1042

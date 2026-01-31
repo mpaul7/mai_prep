@@ -11,8 +11,8 @@ Bootstrapping is a statistical resampling technique that repeatedly samples with
 
 ### **How It Works**
 
-- Take your original sample of size \$ n \$.
-- Randomly draw \$ n \$ samples **with replacement** to create a "bootstrap sample."
+- Take your original sample of size \$n\$.
+- Randomly draw \$n\$ samples **with replacement** to create a "bootstrap sample."
 - Calculate the statistic of interest (e.g., mean) for this sample.
 - Repeat the process many times (e.g., 1,000 or 10,000 times).
 - The distribution of the bootstrapped statistics approximates the sampling distribution, allowing you to estimate standard errors, confidence intervals, and bias.
@@ -55,9 +55,9 @@ print(f"Bootstrapped 95% CI for mean: [{ci_lower:.2f}, {ci_upper:.2f}]")
 
 Cross-validation is a resampling method used to assess how well a model generalizes to unseen data. The most common form is **k-fold cross-validation**:
 
-- Split the data into \$ k \$ equal-sized "folds."
-- Train the model on \$ k-1 \$ folds and test on the remaining fold.
-- Repeat \$ k \$ times, each time using a different fold as the test set.
+- Split the data into \$k\$ equal-sized "folds."
+- Train the model on \$k-1\$ folds and test on the remaining fold.
+- Repeat \$k\$ times, each time using a different fold as the test set.
 - Average the performance metrics across all folds.
 
 

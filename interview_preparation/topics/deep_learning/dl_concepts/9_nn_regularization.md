@@ -28,10 +28,12 @@ There are multiple ways to regularize a neural network, mainly divided into:
 ### 1. **L1 Regularization (Lasso)**
 - **How It Works:** Adds a penalty equal to the absolute value of the weights to the loss function.
 - **Effect:** Encourages sparsity (many weights become zero).
-- **Formula:**  
-  $$
-  \text{Loss} = \text{Original Loss} + \lambda \sum_{i} |w_i|
-  $$
+- **Formula:**
+  
+   $$
+    \text{Loss} = \text{Original Loss} + \lambda \sum_{i} \lvert w_i \rvert
+   $$
+  
 - **When to Use:** When you want a sparse model that ignores some inputs completely.
 
 ---
@@ -39,10 +41,12 @@ There are multiple ways to regularize a neural network, mainly divided into:
 ### 2. **L2 Regularization (Ridge or Weight Decay)**
 - **How It Works:** Adds a penalty equal to the squared value of the weights to the loss function.
 - **Effect:** Prevents weights from growing too large; distributes weights more evenly.
-- **Formula:**  
+- **Formula:**
+  
   $$
-  \text{Loss} = \text{Original Loss} + \lambda \sum_{i} w_i^2
-  $$
+\text{Loss} = \text{Original Loss} + \lambda \sum_{i} w_i^2
+$$
+ 
 - **When to Use:** Default choice—works well in most situations.
 
 ---
