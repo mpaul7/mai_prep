@@ -285,7 +285,7 @@ print(f"str(None) = '{none_str}'")  # 'None'
 # From list (and other objects)
 my_list = [1, 2, 3]
 list_str = str(my_list)
-print(f"str([1, 2, 3]) = '{list_str}'")  # '[1, 2, 3]'
+print(f"str([1, 2, 3]) = {list_str}")  # '[1, 2, 3]'
 
 
 # ----------------------------------------------------------------------------
